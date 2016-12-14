@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YZQRScanViewController">
+            <connections>
+                <outlet property="openURLBtn" destination="9HD-Jd-UJa" id="wg1-zI-QYt"/>
+                <outlet property="textView" destination="qWj-1q-fpd" id="0nR-L1-u25"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHP-jv-gCa">
+                    <rect key="frame" x="127" y="100" width="120" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="bIZ-7H-IU9"/>
+                        <constraint firstAttribute="width" constant="120" id="rW0-F4-0kd"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="扫描二维码"/>
+                    <connections>
+                        <action selector="clickToScanning:" destination="-1" eventType="touchUpInside" id="Duv-N6-GUG"/>
+                    </connections>
+                </button>
+                <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qWj-1q-fpd">
+                    <rect key="frame" x="30" y="367" width="315" height="200"/>
+                    <color key="backgroundColor" red="0.92156862745098034" green="0.87058823529411766" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="2Gq-fH-5HZ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9HD-Jd-UJa">
+                    <rect key="frame" x="136" y="585" width="103" height="39"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="39" id="EGB-3P-Ehg"/>
+                        <constraint firstAttribute="width" constant="103" id="fUI-xo-vRS"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="打开网址"/>
+                    <connections>
+                        <action selector="openURLBtnClick:" destination="-1" eventType="touchUpInside" id="NuD-6A-FkV"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="9HD-Jd-UJa" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="6mJ-Xr-0AG"/>
+                <constraint firstItem="dHP-jv-gCa" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="7DL-jj-0a8"/>
+                <constraint firstItem="dHP-jv-gCa" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="9L3-aX-eYW"/>
+                <constraint firstItem="qWj-1q-fpd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="QnR-vB-ZSF"/>
+                <constraint firstItem="9HD-Jd-UJa" firstAttribute="top" secondItem="qWj-1q-fpd" secondAttribute="bottom" constant="18" id="Sp3-pd-Seb"/>
+                <constraint firstAttribute="bottom" secondItem="qWj-1q-fpd" secondAttribute="bottom" constant="100" id="eM9-5E-dXl"/>
+                <constraint firstAttribute="trailing" secondItem="qWj-1q-fpd" secondAttribute="trailing" constant="30" id="qRK-i7-mgb"/>
+            </constraints>
+            <point key="canvasLocation" x="-109.5" y="34.5"/>
+        </view>
+    </objects>
+</document>

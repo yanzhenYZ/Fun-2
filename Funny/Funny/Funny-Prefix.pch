@@ -1,0 +1,32 @@
+//
+//  Funny-Prefix.pch
+//  Funny
+//
+//  Created by yanzhen on 16/11/25.
+//  Copyright © 2016年 v2tech. All rights reserved.
+//
+
+#ifndef Funny_Prefix_pch
+#define Funny_Prefix_pch
+
+//编译了c++ c等多以必须判断__OBJC__
+#ifdef __OBJC__
+
+#import "NSObject+General.h"
+#import "YZShareInstance.h"
+#import "YZGeneralEnum.h"
+#import "GlobalMacro.h"
+#import "GlobalManager.h"
+
+#import "MJExtension.h"
+
+
+#ifdef DEBUG
+#define YZLog(format, ...) NSLog((format @"\n%s -- %d行\n%s"),##__VA_ARGS__,__func__,__LINE__,__FILE__)
+#else
+#define YZLog(format, ...)
+#endif
+
+#endif
+
+#endif /* Funny_Prefix_pch */

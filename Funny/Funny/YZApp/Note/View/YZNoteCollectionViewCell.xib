@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="YZNoteCollectionViewCell" id="gTV-IL-0wX" customClass="YZNoteCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="228" height="175"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="228" height="175"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="X7P-cI-RlW">
+                        <rect key="frame" x="0.0" y="0.0" width="228" height="140"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cy2-de-IaM">
+                        <rect key="frame" x="5" y="145" width="218" height="25"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CT1-mU-sXg">
+                        <rect key="frame" x="196" y="2" width="30" height="30"/>
+                        <state key="normal" image="closeWindowView"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" red="1" green="0.60784313725490191" blue="0.090196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="deleteBtnClick:" destination="gTV-IL-0wX" eventType="touchUpInside" id="2KX-fm-BmP"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="0.94117647058823528" green="0.86274509803921573" blue="0.5490196078431373" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="CT1-mU-sXg" secondAttribute="trailing" constant="2" id="5fW-c7-NN8"/>
+                <constraint firstItem="Cy2-de-IaM" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="8su-au-8cp"/>
+                <constraint firstAttribute="bottom" secondItem="Cy2-de-IaM" secondAttribute="bottom" constant="5" id="Aiy-77-plg"/>
+                <constraint firstItem="CT1-mU-sXg" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="2" id="NTI-mo-YHv"/>
+                <constraint firstAttribute="bottom" secondItem="X7P-cI-RlW" secondAttribute="bottom" constant="35" id="PIA-IP-1Kd"/>
+                <constraint firstItem="X7P-cI-RlW" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="k90-ij-1FK"/>
+                <constraint firstAttribute="trailing" secondItem="Cy2-de-IaM" secondAttribute="trailing" constant="5" id="oSm-Sv-iiw"/>
+                <constraint firstAttribute="trailing" secondItem="X7P-cI-RlW" secondAttribute="trailing" id="rIb-NO-gVr"/>
+                <constraint firstItem="X7P-cI-RlW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="rIu-1z-4pc"/>
+                <constraint firstItem="Cy2-de-IaM" firstAttribute="top" secondItem="X7P-cI-RlW" secondAttribute="bottom" constant="5" id="zcV-1S-rfR"/>
+            </constraints>
+            <size key="customSize" width="228" height="175"/>
+            <connections>
+                <outlet property="deleteBtn" destination="CT1-mU-sXg" id="EQm-cl-Smz"/>
+                <outlet property="textView" destination="X7P-cI-RlW" id="ZAH-I4-SOP"/>
+                <outlet property="titleLab" destination="Cy2-de-IaM" id="FQu-lD-Owl"/>
+            </connections>
+            <point key="canvasLocation" x="-47" y="-4.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="closeWindowView" width="30" height="30"/>
+    </resources>
+</document>

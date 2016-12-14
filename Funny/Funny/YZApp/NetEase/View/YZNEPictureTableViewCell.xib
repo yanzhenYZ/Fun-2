@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="YZNEPictureTableViewCell" rowHeight="108" id="KGk-i7-Jjw" customClass="YZNEPictureTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aWC-5a-i8w">
+                        <rect key="frame" x="15" y="10" width="94" height="69"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="aWC-5a-i8w" secondAttribute="height" multiplier="19:14" id="lrR-lu-ZSB"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="jclslsldl;ksadkl;sakdsal;dl;saldklsal;kdkllksal;dlk;sla;l;dklsalk;" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yat-sn-dIr">
+                        <rect key="frame" x="119" y="10" width="246" height="45"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylg-Zg-jx7">
+                        <rect key="frame" x="119" y="60" width="246" height="19"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Yat-sn-dIr" firstAttribute="leading" secondItem="aWC-5a-i8w" secondAttribute="trailing" constant="10" id="2cu-G9-Q4b"/>
+                    <constraint firstItem="aWC-5a-i8w" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="AUA-Xq-Ffq"/>
+                    <constraint firstAttribute="bottom" secondItem="ylg-Zg-jx7" secondAttribute="bottom" constant="10" id="GhR-lb-G0e"/>
+                    <constraint firstAttribute="trailing" secondItem="ylg-Zg-jx7" secondAttribute="trailing" constant="10" id="Hte-oh-SBl"/>
+                    <constraint firstAttribute="trailing" secondItem="Yat-sn-dIr" secondAttribute="trailing" constant="10" id="huR-f3-28j"/>
+                    <constraint firstAttribute="bottom" secondItem="aWC-5a-i8w" secondAttribute="bottom" constant="10" id="j3W-cM-qZr"/>
+                    <constraint firstItem="Yat-sn-dIr" firstAttribute="bottom" secondItem="aWC-5a-i8w" secondAttribute="centerY" constant="10" id="j5X-pu-Ngj"/>
+                    <constraint firstItem="ylg-Zg-jx7" firstAttribute="top" secondItem="Yat-sn-dIr" secondAttribute="bottom" constant="5" id="lK5-Kq-iod"/>
+                    <constraint firstItem="aWC-5a-i8w" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="mCE-dA-bcC"/>
+                    <constraint firstItem="ylg-Zg-jx7" firstAttribute="leading" secondItem="aWC-5a-i8w" secondAttribute="trailing" constant="10" id="mQZ-vX-2Mo"/>
+                    <constraint firstItem="Yat-sn-dIr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="zpl-1Z-aEQ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+            <connections>
+                <outlet property="imageV" destination="aWC-5a-i8w" id="a29-KI-9vN"/>
+                <outlet property="subTitleLab" destination="ylg-Zg-jx7" id="iob-6v-myx"/>
+                <outlet property="titleLab" destination="Yat-sn-dIr" id="52c-Mg-scu"/>
+            </connections>
+            <point key="canvasLocation" x="-419" y="25"/>
+        </tableViewCell>
+    </objects>
+</document>

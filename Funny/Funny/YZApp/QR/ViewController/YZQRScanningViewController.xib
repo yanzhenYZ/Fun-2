@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YZQRScanningViewController">
+            <connections>
+                <outlet property="imageView" destination="wmT-7W-WEu" id="1aR-14-Mca"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JzE-3d-u5r">
+                    <rect key="frame" x="305" y="597" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="m4G-Hz-9iH"/>
+                        <constraint firstAttribute="height" constant="40" id="nFR-Ub-9pE"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                    <state key="normal" title="X">
+                        <color key="titleColor" red="0.078431372549019607" green="0.6588235294117647" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" red="0.078431372549019607" green="0.6588235294117647" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="close:" destination="-1" eventType="touchUpInside" id="QpP-dT-avL"/>
+                    </connections>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="canBg" translatesAutoresizingMaskIntoConstraints="NO" id="wmT-7W-WEu">
+                    <rect key="frame" x="37" y="183" width="300" height="300"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="300" id="HN1-TA-CrG"/>
+                        <constraint firstAttribute="width" constant="300" id="bSP-CJ-JcZ"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="将二维码图像置于矩形方框内，离手机摄像头10CM左右，系统会自动识别。" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ps1-WZ-zvx">
+                    <rect key="frame" x="30" y="100" width="315" height="43"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" red="0.078431372549019607" green="0.6588235294117647" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Sd-2V-ehg">
+                    <rect key="frame" x="30" y="597" width="122" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="122" id="LQq-0X-UTq"/>
+                        <constraint firstAttribute="height" constant="40" id="hoT-Kt-gER"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    <state key="normal" title="从相册选择">
+                        <color key="titleColor" red="0.078431372549019607" green="0.6588235294117647" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="scanPhoto:" destination="-1" eventType="touchUpInside" id="hAk-6B-dnu"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="JzE-3d-u5r" secondAttribute="trailing" constant="30" id="304-hd-9d3"/>
+                <constraint firstAttribute="trailing" secondItem="ps1-WZ-zvx" secondAttribute="trailing" constant="30" id="59p-4m-xvV"/>
+                <constraint firstAttribute="bottom" secondItem="8Sd-2V-ehg" secondAttribute="bottom" constant="30" id="9f5-Lt-8Ft"/>
+                <constraint firstItem="wmT-7W-WEu" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="O0V-pn-UP4"/>
+                <constraint firstItem="ps1-WZ-zvx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="auC-Vi-gN2"/>
+                <constraint firstItem="ps1-WZ-zvx" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="f0T-o4-cO8"/>
+                <constraint firstItem="8Sd-2V-ehg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="mae-lO-aiY"/>
+                <constraint firstAttribute="bottom" secondItem="JzE-3d-u5r" secondAttribute="bottom" constant="30" id="r72-ag-qKM"/>
+                <constraint firstItem="wmT-7W-WEu" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="tAY-pq-med"/>
+            </constraints>
+            <point key="canvasLocation" x="-135.5" y="1.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="canBg" width="300" height="300"/>
+    </resources>
+</document>
