@@ -19,6 +19,7 @@
 @interface YZYKNearCollectionViewController ()<UICollectionViewDelegateFlowLayout>
 @property (strong, nonatomic) NSMutableArray *dataSource;
 @property (nonatomic, strong) YZRefreshHeaderView *header;
+@property (nonatomic, weak) YZHomeViewController *homeVC;
 @end
 
 @implementation YZYKNearCollectionViewController
@@ -28,6 +29,14 @@ static NSString * const reuseIdentifier = @"YZYKNearCollectionViewCell";
 -(void)dealloc{
     [_header free];
 }
+
+-(YZHomeViewController *)homeVC{
+    if (!_homeVC) {
+        _homeVC = (YZHomeViewController *)self.parentViewController;
+    }
+    return _homeVC;
+}
+
 //必须-在初始化的时候给他一个---布局
 -(instancetype)init{
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
@@ -114,20 +123,19 @@ static NSString * const reuseIdentifier = @"YZYKNearCollectionViewCell";
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     YZYKPlayerViewController *vc = [[YZYKPlayerViewController alloc] initWithYingKeModel:self.dataSource[indexPath.item]];
     vc.hidesBottomBarWhenPushed = YES;
+    [_homeVC push];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark - scrollView
 -(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
     if (scrollView.contentOffset.y < 0) return;
-    YZHomeViewController *homeVC = (YZHomeViewController *)self.parentViewController;
-    [homeVC childVCDidEndDragging:scrollView.contentOffset.y];
+    [self.homeVC childVCDidEndDragging:scrollView.contentOffset.y];
 }
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
     CGFloat offsetY = scrollView.contentOffset.y;
     if (scrollView.contentOffset.y < 0) return;
-    YZHomeViewController *homeVC = (YZHomeViewController *)self.parentViewController;
-    [homeVC childVCDidScroll:offsetY isHot:NO];
+    [self.homeVC childVCDidScroll:offsetY isHot:NO];
 }
 @end

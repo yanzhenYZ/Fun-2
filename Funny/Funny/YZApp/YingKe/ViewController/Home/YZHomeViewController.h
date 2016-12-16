@@ -12,4 +12,5 @@
 
 - (void)childVCDidScroll:(CGFloat)offsetY isHot:(BOOL)hot;
 - (void)childVCDidEndDragging:(CGFloat)offsetY;
+- (void)push;
 @end

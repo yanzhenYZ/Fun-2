@@ -78,6 +78,12 @@
     }
 }
 
+- (void)push{
+    UIEdgeInsets inset = self.scrollView.contentInset;
+    inset.top = 64;
+    self.scrollView.contentInset = inset;
+}
+
 - (void)childVCDidEndDragging:(CGFloat)offsetY{
     
     UITabBar *tabBar = self.tabBarController.tabBar;

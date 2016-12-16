@@ -18,12 +18,19 @@
 @interface YZYKHotTableViewController ()
 @property (nonatomic, strong) NSMutableArray *dataSource;
 @property (nonatomic, strong) YZRefreshHeaderView *header;
+@property (nonatomic, weak) YZHomeViewController *homeVC;
 @end
 
 @implementation YZYKHotTableViewController
-
 -(void)dealloc{
     [_header free];
+}
+
+-(YZHomeViewController *)homeVC{
+    if (!_homeVC) {
+        _homeVC = (YZHomeViewController *)self.parentViewController;
+    }
+    return _homeVC;
 }
 
 - (void)viewDidLoad {
@@ -75,6 +82,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     YZYKPlayerViewController *vc = [[YZYKPlayerViewController alloc] initWithYingKeModel:self.dataSource[indexPath.row]];
     vc.hidesBottomBarWhenPushed = YES;
+    [_homeVC push];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
@@ -82,14 +90,12 @@
 #pragma mark - navgationBar和tabBar滑动隐藏
 -(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
     if (scrollView.contentOffset.y < 0) return;
-    YZHomeViewController *homeVC = (YZHomeViewController *)self.parentViewController;
-    [homeVC childVCDidEndDragging:scrollView.contentOffset.y];
+    [self.homeVC childVCDidEndDragging:scrollView.contentOffset.y];
 }
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
     CGFloat offsetY = scrollView.contentOffset.y;
     if (scrollView.contentOffset.y < 0) return;
-    YZHomeViewController *homeVC = (YZHomeViewController *)self.parentViewController;
-    [homeVC childVCDidScroll:offsetY isHot:YES];
+    [self.homeVC childVCDidScroll:offsetY isHot:YES];
 }
 @end
