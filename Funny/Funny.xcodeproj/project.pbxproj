@@ -345,6 +345,8 @@
 		9B5F13091E00F12100C9CE69 /* YZYKDeclarationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B5F13071E00F12100C9CE69 /* YZYKDeclarationViewController.xib */; };
 		9B5F130D1E00F14300C9CE69 /* YZYKBeautyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B5F130B1E00F14300C9CE69 /* YZYKBeautyViewController.m */; };
 		9B5F130E1E00F14300C9CE69 /* YZYKBeautyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B5F130C1E00F14300C9CE69 /* YZYKBeautyViewController.xib */; };
+		9BD24DD81E091155001ED9DF /* YZClipImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD24DD71E091155001ED9DF /* YZClipImageViewController.m */; };
+		9BD24DDB1E0911DC001ED9DF /* YZClipImageMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD24DDA1E0911DC001ED9DF /* YZClipImageMaskView.m */; };
 		9BDDDF851DE6F08A001BD7BC /* YZRootFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDDDF841DE6F08A001BD7BC /* YZRootFirstViewController.m */; };
 		9BDDDF881DE6F0A1001BD7BC /* YZRootSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDDDF871DE6F0A1001BD7BC /* YZRootSecondViewController.m */; };
 		9BDDDF8D1DE7CEE8001BD7BC /* YZIconButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDDDF8C1DE7CEE8001BD7BC /* YZIconButton.m */; };
@@ -1126,6 +1128,10 @@
 		9B5F130A1E00F14300C9CE69 /* YZYKBeautyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZYKBeautyViewController.h; sourceTree = "<group>"; };
 		9B5F130B1E00F14300C9CE69 /* YZYKBeautyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZYKBeautyViewController.m; sourceTree = "<group>"; };
 		9B5F130C1E00F14300C9CE69 /* YZYKBeautyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YZYKBeautyViewController.xib; sourceTree = "<group>"; };
+		9BD24DD61E091155001ED9DF /* YZClipImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZClipImageViewController.h; sourceTree = "<group>"; };
+		9BD24DD71E091155001ED9DF /* YZClipImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZClipImageViewController.m; sourceTree = "<group>"; };
+		9BD24DD91E0911DC001ED9DF /* YZClipImageMaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZClipImageMaskView.h; sourceTree = "<group>"; };
+		9BD24DDA1E0911DC001ED9DF /* YZClipImageMaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZClipImageMaskView.m; sourceTree = "<group>"; };
 		9BDDDF831DE6F08A001BD7BC /* YZRootFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZRootFirstViewController.h; sourceTree = "<group>"; };
 		9BDDDF841DE6F08A001BD7BC /* YZRootFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZRootFirstViewController.m; sourceTree = "<group>"; };
 		9BDDDF861DE6F0A1001BD7BC /* YZRootSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZRootSecondViewController.h; sourceTree = "<group>"; };
@@ -2456,6 +2462,17 @@
 			path = My;
 			sourceTree = "<group>";
 		};
+		9BD24DD51E09113E001ED9DF /* YZClipImageLib */ = {
+			isa = PBXGroup;
+			children = (
+				9BD24DD91E0911DC001ED9DF /* YZClipImageMaskView.h */,
+				9BD24DDA1E0911DC001ED9DF /* YZClipImageMaskView.m */,
+				9BD24DD61E091155001ED9DF /* YZClipImageViewController.h */,
+				9BD24DD71E091155001ED9DF /* YZClipImageViewController.m */,
+			);
+			path = YZClipImageLib;
+			sourceTree = "<group>";
+		};
 		9BDDDF891DE7CEB7001BD7BC /* YZView */ = {
 			isa = PBXGroup;
 			children = (
@@ -2624,6 +2641,7 @@
 		9BDDDFDB1DE7EBAA001BD7BC /* YZ */ = {
 			isa = PBXGroup;
 			children = (
+				9BD24DD51E09113E001ED9DF /* YZClipImageLib */,
 				9BDDDFDC1DE7EBAA001BD7BC /* YZRefresh */,
 			);
 			path = YZ;
@@ -3037,7 +3055,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = YZ;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = v2tech;
 				TargetAttributes = {
 					9B22C34C1DE6EB87005714D2 = {
@@ -3356,6 +3374,7 @@
 				9BECC8821DED7C49008384D8 /* YZVideoFrame.m in Sources */,
 				9B5F12491DFFCFD900C9CE69 /* GPUImageSaturationFilter.m in Sources */,
 				9B5F12421DFFCFD900C9CE69 /* GPUImageRawDataOutput.m in Sources */,
+				9BD24DD81E091155001ED9DF /* YZClipImageViewController.m in Sources */,
 				9B5F13011E00D85600C9CE69 /* YZYKDBModel.m in Sources */,
 				9B5F12391DFFCFD900C9CE69 /* GPUImagePinchDistortionFilter.m in Sources */,
 				9BDDE0C61DE821B1001BD7BC /* NSObject+MJProperty.m in Sources */,
@@ -3453,6 +3472,7 @@
 				9B05BEDE1DF6530E00BEAF96 /* FMDatabasePool.m in Sources */,
 				9B5F11D71DFFCFD900C9CE69 /* GPUImageBoxBlurFilter.m in Sources */,
 				9B5F12071DFFCFD900C9CE69 /* GPUImageHalftoneFilter.m in Sources */,
+				9BD24DDB1E0911DC001ED9DF /* YZClipImageMaskView.m in Sources */,
 				9BDDE0051DE7EBAA001BD7BC /* YZRefreshExtend.m in Sources */,
 				9BDDE0811DE7EEEF001BD7BC /* UIView+WebCache.m in Sources */,
 				9B5F12801DFFCFD900C9CE69 /* LFHardwareAudioEncoder.m in Sources */,
@@ -3594,6 +3614,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -3642,6 +3663,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

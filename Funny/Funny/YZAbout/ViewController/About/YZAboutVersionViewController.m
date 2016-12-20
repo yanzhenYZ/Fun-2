@@ -8,6 +8,7 @@
 
 #import "YZAboutVersionViewController.h"
 #import "YZNewVersionViewController.h"
+#import "YZClipImageViewController.h"
 
 @interface YZAboutVersionViewController ()<UIViewControllerPreviewingDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *aboutIV;
@@ -48,6 +49,19 @@
 
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
     UIImage *image = info[UIImagePickerControllerOriginalImage];
+    if (isIpad()) {
+        [self maekHeaderImage:image];
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }else{
+        YZWeakSelf(self)
+        YZClipImageViewController *vc = [[YZClipImageViewController alloc] initWithImage:image clipImage:^(UIImage *image) {
+            [weakself maekHeaderImage:image];
+        }];
+        [picker pushViewController:vc animated:YES];
+    }
+}
+
+- (void)maekHeaderImage:(UIImage *)image{
     _aboutIV.image = image;
     NSData *data = UIImagePNGRepresentation(image);
     NSString *filePath = [DocumentsPath stringByAppendingPathComponent:@"about"];
@@ -57,7 +71,6 @@
         [[NSFileManager defaultManager] createDirectoryAtPath:filePath withIntermediateDirectories:YES attributes:nil error:&error];
     }
     [data writeToFile:[filePath stringByAppendingPathComponent:@"image.data"] atomically:NO];
-    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - UIViewControllerPreviewingDelegate

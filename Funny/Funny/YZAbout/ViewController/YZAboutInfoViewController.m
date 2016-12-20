@@ -7,6 +7,7 @@
 //
 
 #import "YZAboutInfoViewController.h"
+#import "YZClipImageViewController.h"
 #import "YZTableHeaderView.h"
 
 #define ABOUTHEADHEIGHT isIpad() ? 400 : 290
@@ -134,6 +135,23 @@
 
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
     UIImage *image = info[UIImagePickerControllerOriginalImage];
+    if (isIpad()) {
+        [self maekHeaderImage:image];
+        [self dismissViewControllerAnimated:YES completion:^{
+            
+        }];
+    }else{
+        YZWeakSelf(self)
+        YZClipImageViewController *vc = [[YZClipImageViewController alloc] initWithImage:image clipImage:^(UIImage *image) {
+            //获得图片的宽高时正方形--使用时长方形，会有偏差
+            [weakself maekHeaderImage:image];
+        }];
+        [picker pushViewController:vc animated:YES];
+    }
+    
+}
+
+- (void)maekHeaderImage:(UIImage *)image{
     self.headView.headImageView.image = image;
     NSData *data = UIImagePNGRepresentation(image);
     NSString *filePath = [DocumentsPath stringByAppendingPathComponent:@"AboutHeadImage"];
@@ -141,9 +159,6 @@
         [[NSFileManager defaultManager] createDirectoryAtPath:filePath withIntermediateDirectories:YES attributes:nil error:nil];
     }
     [data writeToFile:[self filePath] atomically:NO];
-    [self dismissViewControllerAnimated:YES completion:^{
-        
-    }];
 }
 
 - (NSString *)filePath{
