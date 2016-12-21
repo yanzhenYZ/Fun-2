@@ -36,6 +36,8 @@ MShareInstance(VideoManage);
     _videoCell.isPause = NO;
     NSURL *url = [NSURL URLWithString:urlString];
     AVPlayerItem *playerItem = [[AVPlayerItem alloc] initWithURL:url];
+    //没做详细测试，使用子线程的话，必须把下面UI相关放到主线程
+//    dispatch_async(dispatch_queue_create(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
     dispatch_async(dispatch_get_main_queue(), ^{
         if (self.isPlayEnd && self.player.currentItem) {
             [[NSNotificationCenter defaultCenter] removeObserver:self];

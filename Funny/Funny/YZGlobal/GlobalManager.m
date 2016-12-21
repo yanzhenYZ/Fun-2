@@ -37,7 +37,9 @@ MShareInstance(Manager)
     [manage cancelAll];
     [manage.imageCache clearMemory];
     [manage.imageCache clearDiskOnCompletion:^{
-        block();
+        if (block) {
+            block();
+        }
     }];
 }
 
