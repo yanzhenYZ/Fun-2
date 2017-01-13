@@ -113,6 +113,7 @@ void ProviderReleaseData (void *info, const void *data, size_t size){
             ptr[0] = 0;
         }
     }
+    NSLog(@"TTTT:%u",kCGImageAlphaLast | kCGBitmapByteOrder32Little);
     // 输出图片
     CGDataProviderRef dataProvider = CGDataProviderCreateWithData(NULL, rgbImageBuf, bytesPerRow * imageHeight, ProviderReleaseData);
     CGImageRef imageRef = CGImageCreate(imageWidth, imageHeight, 8, 32, bytesPerRow, colorSpace,

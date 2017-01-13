@@ -91,7 +91,7 @@
     __block UIEdgeInsets inset = self.scrollView.contentInset;
     void (^IdentityBlock)() = ^(){
         [UIView animateWithDuration:0.25 animations:^{
-            tabBar.y = tabBar.y = HEIGHT - 49;
+            tabBar.y = HEIGHT - 49;
             navigationBar.y = 20;
             inset.top = navigationBar.y + 44;
             self.scrollView.contentInset = inset;

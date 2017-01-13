@@ -104,27 +104,25 @@ static const CGFloat SCANWH = 300.0;
     if (ciImage) {
         CIDetector *detector = [CIDetector detectorOfType:CIDetectorTypeQRCode context:[CIContext contextWithOptions:@{kCIContextUseSoftwareRenderer : @(YES)}] options:@{CIDetectorAccuracy : CIDetectorAccuracyHigh}];
         NSArray *array = [detector featuresInImage:ciImage];
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
         if (array.count > 0) {
             for (CIFeature *feature in array) {
                 if ([feature isKindOfClass:[CIQRCodeFeature class]]) {
                     CIQRCodeFeature *qrFeature = (CIQRCodeFeature *)feature;
-                    NSString *code = qrFeature.messageString;
-                    [self.scanVC scanningDone:code];
-                    [MBProgressHUD hideHUDForView:self.view animated:YES];
-                    [self dismissViewControllerAnimated:NO completion:nil];
+                    [self scanningDone:qrFeature.messageString];
+                    return;
                 }
             }
-        }else{
-            [MBProgressHUD hideHUDForView:self.view animated:YES];
-            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"无法识别您选中的图片" preferredStyle:UIAlertControllerStyleAlert];
-            UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-                
-            }];
-            [alert addAction:action];
-            [self presentViewController:alert animated:YES completion:^{
-            }];
         }
     }
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"无法识别您选中的图片" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        
+    }];
+    [alert addAction:action];
+    [self presentViewController:alert animated:YES completion:^{
+    }];
 }
 
 #pragma mark - scan
@@ -164,16 +162,20 @@ static const CGFloat SCANWH = 300.0;
 -(void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection{
     if (metadataObjects.count > 0) {
         AVMetadataMachineReadableCodeObject *obj = metadataObjects[0];
-        if (_is3DTouch) {
-            [self touchAction:obj.stringValue];
-        }else if (_isLive){
-            [_session stopRunning];
-            [self liveAction:obj.stringValue];
-        }else{
-            [_scanVC scanningDone:obj.stringValue];
-            [_session stopRunning];
-            [self dismissViewControllerAnimated:YES completion:nil];
-        }
+        [self scanningDone:obj.stringValue];
+    }
+}
+
+- (void)scanningDone:(NSString *)value{
+    if (_is3DTouch) {
+        [self touchAction:value];
+    }else if (_isLive){
+        [_session stopRunning];
+        [self liveAction:value];
+    }else{
+        [_scanVC scanningDone:value];
+        [_session stopRunning];
+        [self dismissViewControllerAnimated:YES completion:nil];
     }
 }
 

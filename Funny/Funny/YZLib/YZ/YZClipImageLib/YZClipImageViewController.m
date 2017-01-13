@@ -55,13 +55,7 @@ typedef void(^ImageBlock)(UIImage *image);
     
     CGFloat imageW = _image.size.width;
     CGFloat imageH = _image.size.height;
-    CGFloat scale  = 1.0;
-    if (imageW > WIDTH) {
-        scale = WIDTH / imageW;
-    }else if (imageW < WIDTH){
-        scale = WIDTH / imageW;
-    }
-    
+    CGFloat scale  = WIDTH / imageW;
     imageW *= scale;
     imageH *= scale;
     

@@ -1664,10 +1664,10 @@
 		9B59B6081DEFC3CE001D2F70 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				9B59B6091DEFCA6B001D2F70 /* YZNetEaseTabBarViewController.h */,
-				9B59B60A1DEFCA6B001D2F70 /* YZNetEaseTabBarViewController.m */,
 				9B59B60C1DEFCA90001D2F70 /* YZNetEaseViewController.h */,
 				9B59B60D1DEFCA90001D2F70 /* YZNetEaseViewController.m */,
+				9B59B6091DEFCA6B001D2F70 /* YZNetEaseTabBarViewController.h */,
+				9B59B60A1DEFCA6B001D2F70 /* YZNetEaseTabBarViewController.m */,
 				9B59B61F1DEFF14B001D2F70 /* YZNEWebViewController.h */,
 				9B59B6201DEFF14B001D2F70 /* YZNEWebViewController.m */,
 			);
@@ -3707,7 +3707,7 @@
 					OTHERUSEr,
 				);
 				INFOPLIST_FILE = Funny/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3735,7 +3735,7 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Funny/Funny-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = OTHERUSE;
 				INFOPLIST_FILE = Funny/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
