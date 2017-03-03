@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface YZMediaTool : NSObject
-+ (void)requestAccessForVideo;
++(void)requestAccessForVideo:(void (^)(BOOL authorized))handler;
 + (void)requestAccessForAudio;
 @end

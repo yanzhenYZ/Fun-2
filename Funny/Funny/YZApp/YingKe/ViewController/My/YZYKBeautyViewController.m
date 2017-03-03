@@ -31,7 +31,7 @@
     _brightLevel = [YZYKLiveAddress getBrightLevel] * 10;
     _beautySlider.value = _beautyLevel;
     _brightSlider.value = _brightLevel;
-    [YZMediaTool requestAccessForVideo];
+    [YZMediaTool requestAccessForVideo:nil];
     [YZMediaTool requestAccessForAudio];
     
     _session = [[LFLiveSession alloc] initWithAudioConfiguration:[LFLiveAudioConfiguration defaultConfiguration]  videoConfiguration:[LFLiveVideoConfiguration defaultConfigurationForQuality:[YZYKLiveAddress getVideoQuality]]];

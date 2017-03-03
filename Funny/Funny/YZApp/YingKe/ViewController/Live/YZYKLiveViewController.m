@@ -30,7 +30,7 @@
     [self.view addSubview:_preView];
     [self.view insertSubview:_preView atIndex:1];
     
-    [YZMediaTool requestAccessForVideo];
+    [YZMediaTool requestAccessForVideo:nil];
     [YZMediaTool requestAccessForAudio];
     
     _session = [[LFLiveSession alloc] initWithAudioConfiguration:[LFLiveAudioConfiguration defaultConfiguration]  videoConfiguration:[LFLiveVideoConfiguration defaultConfigurationForQuality:[YZYKLiveAddress getVideoQuality]]];

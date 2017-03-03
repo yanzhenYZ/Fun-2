@@ -10,8 +10,11 @@
 #import "YZRootFirstViewController.h"
 #import "YZRootSecondViewController.h"
 #import "YZQRScanningViewController.h"
+#import "YZFaceView.h"
+#import "YZMediaTool.h"
 
 @interface YZRootViewController ()<UIScrollViewDelegate>
+@property (nonatomic, strong) YZFaceView *faceView;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (nonatomic, strong) YZRootFirstViewController *firstVC;
 @property (nonatomic, strong) YZRootSecondViewController *secondVC;
@@ -22,7 +25,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    YZBlockSelf(self)
+    [YZMediaTool requestAccessForVideo:^(BOOL authorized) {
+        if (authorized) {
+            //不在主线程，必须回到主线程做UI的操作
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [blockself.view addSubview:blockself.faceView];
+                [blockself.view insertSubview:blockself.faceView atIndex:0];
+                [blockself.faceView startRunning];
+                blockself.scrollView.backgroundColor = [UIColor clearColor];
+            });
+        }
+    }];
     _firstVC = [[YZRootFirstViewController alloc] init];
     _secondVC = [[YZRootSecondViewController alloc] init];
     [self addChildViewController:_firstVC];
@@ -33,7 +47,16 @@
     [_scrollView addSubview:_firstVC.view];
     [_scrollView addSubview:_secondVC.view];
     _scrollView.contentSize = CGSizeMake(0, height * 2);
-    
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [_faceView startRunning];
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [_faceView stopRunning];
 }
 
 - (void)widgetIntoViewController:(NSInteger)tag{
@@ -59,5 +82,11 @@
     }
 }
 
-
+-(YZFaceView *)faceView{
+    if (!_faceView) {
+        _faceView = [[YZFaceView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, HEIGHT)];
+        _faceView.userInteractionEnabled = NO;
+    }
+    return _faceView;
+}
 @end

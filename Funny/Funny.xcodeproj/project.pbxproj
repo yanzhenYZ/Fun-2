@@ -37,6 +37,7 @@
 		9B22C3601DE6EB87005714D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B22C35E1DE6EB87005714D2 /* LaunchScreen.storyboard */; };
 		9B22C36A1DE6EED0005714D2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B22C3691DE6EED0005714D2 /* AppDelegate.m */; };
 		9B22C36D1DE6EF02005714D2 /* YZRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B22C36C1DE6EF02005714D2 /* YZRootViewController.m */; };
+		9B2D4D001E69468F00FA5507 /* YZFaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B2D4CFF1E69468F00FA5507 /* YZFaceView.m */; };
 		9B59B5991DEE6702001D2F70 /* YZWalfareVideoFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B59B5981DEE6702001D2F70 /* YZWalfareVideoFrame.m */; };
 		9B59B59C1DEE687F001D2F70 /* YZWalfareTextFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B59B59B1DEE687F001D2F70 /* YZWalfareTextFrame.m */; };
 		9B59B59F1DEE69AA001D2F70 /* YZWalfareGirlFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B59B59E1DEE69AA001D2F70 /* YZWalfareGirlFrame.m */; };
@@ -529,6 +530,8 @@
 		9B22C3691DE6EED0005714D2 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		9B22C36B1DE6EF02005714D2 /* YZRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZRootViewController.h; sourceTree = "<group>"; };
 		9B22C36C1DE6EF02005714D2 /* YZRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZRootViewController.m; sourceTree = "<group>"; };
+		9B2D4CFE1E69468F00FA5507 /* YZFaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZFaceView.h; sourceTree = "<group>"; };
+		9B2D4CFF1E69468F00FA5507 /* YZFaceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZFaceView.m; sourceTree = "<group>"; };
 		9B59B5971DEE6702001D2F70 /* YZWalfareVideoFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZWalfareVideoFrame.h; sourceTree = "<group>"; };
 		9B59B5981DEE6702001D2F70 /* YZWalfareVideoFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZWalfareVideoFrame.m; sourceTree = "<group>"; };
 		9B59B59A1DEE687F001D2F70 /* YZWalfareTextFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZWalfareTextFrame.h; sourceTree = "<group>"; };
@@ -1797,6 +1800,8 @@
 		9B5F02C01DF7AFF400C9CE69 /* GlobalView */ = {
 			isa = PBXGroup;
 			children = (
+				9B2D4CFE1E69468F00FA5507 /* YZFaceView.h */,
+				9B2D4CFF1E69468F00FA5507 /* YZFaceView.m */,
 				9B5F02C11DF7AFF400C9CE69 /* YZTextField.h */,
 				9B5F02C21DF7AFF400C9CE69 /* YZTextField.m */,
 			);
@@ -3251,6 +3256,7 @@
 				9B05BF021DF6ADE900BEAF96 /* YZSettingTableViewController.m in Sources */,
 				9BDDE0BF1DE821B1001BD7BC /* MJFoundation.m in Sources */,
 				9BECC8891DED8834008384D8 /* YZWalfareTabBarViewController.m in Sources */,
+				9B2D4D001E69468F00FA5507 /* YZFaceView.m in Sources */,
 				9B5F12851DFFCFD900C9CE69 /* LFGPUImageEmptyFilter.m in Sources */,
 				9B59B60E1DEFCA90001D2F70 /* YZNetEaseViewController.m in Sources */,
 				9B05BF061DF6B4A400BEAF96 /* YZFunnyCrashViewController.m in Sources */,
