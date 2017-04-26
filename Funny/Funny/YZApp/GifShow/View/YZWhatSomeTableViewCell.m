@@ -35,12 +35,11 @@
     return self;
 }
 
--(void)setPictureFrame:(YZWhatSomeFrame *)pictureFrame{
-    _pictureFrame = pictureFrame;
+- (void)configure:(YZWhatSomeFrame *)pictureFrame{
     YZWhatSomeGroup *group = pictureFrame.model.group;
     [self.userView headViewWithheadImageUrlString:group.user.avatar_url name:group.user.name time:group.create_time.longLongValue];
     self.contentLabel.text = group.text;
-    [self.mainImageView yz_setImageWithURL:group.middle_image.url_list[0][@"url"] placeholderImage:@"Y&Z"];
+    [self.mainImageView yz_setImageWithURL:group.middle_image.url_list[0][@"url"]];
     
     self.userView.frame = CGRectMake(CONTENTSPACE * 2, CONTENTSPACE, WIDTH - 4 * CONTENTSPACE, USERVIEWHEIGHT);
     self.contentLabel.frame = pictureFrame.contentLabelFrame;

@@ -18,9 +18,8 @@
 
 @implementation YZNEPictureTableViewCell
 
--(void)setModel:(YZNetEaseModel *)model{
-    _model = model;
-    [_imageV yz_setImageWithURL:model.imgsrc placeholderImage:@"Y&Z"];
+- (void)configure:(YZNetEaseModel *)model{
+    [_imageV yz_setImageWithURL:model.imgsrc];
     _titleLab.text = model.title;
     _subTitleLab.text = model.digest;
 }

@@ -121,7 +121,8 @@ static NSString * const reuseIdentifier = @"YZYKNearCollectionViewCell";
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    YZYKPlayerViewController *vc = [[YZYKPlayerViewController alloc] initWithYingKeModel:self.dataSource[indexPath.item]];
+    YZYingKeModel *model = self.dataSource[indexPath.row];
+    YZYKPlayerViewController *vc = [[YZYKPlayerViewController alloc] initWithStream_addr:model.stream_addr img:model.creator.portrait];
     vc.hidesBottomBarWhenPushed = YES;
     [_homeVC push];
     [self.navigationController pushViewController:vc animated:YES];

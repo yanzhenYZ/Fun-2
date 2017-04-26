@@ -84,6 +84,7 @@ MShareInstance(VideoManage);
 
 -(void)tableViewReload{
     [self playVideoInterrupt];
+    self.videoCell.playBtn.selected = NO;
 }
 
 - (void)playVideoInterrupt{

@@ -10,5 +10,5 @@
 
 @class YZWalfareTextFrame;
 @interface YZWalfareTextTableViewCell : YZTextTableViewCell
-@property (nonatomic, strong) YZWalfareTextFrame *textFrame;
+- (void)configure:(YZWalfareTextFrame *)textFrame;
 @end

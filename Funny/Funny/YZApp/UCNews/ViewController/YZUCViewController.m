@@ -96,31 +96,29 @@ static NSString *const YZUCPictureCell = @"YZUCPictureCell";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     YZUCNewsModel *model = self.dataSource[indexPath.row];
-    if (model.thumbnails.count == 3) {
+    if (model.thumbnails.count >= 3) {
         YZUCPicturesTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:YZUCPicturesCell];
         if (!cell) {
             cell=[[[NSBundle mainBundle] loadNibNamed:@"YZUCPicturesTableViewCell" owner:self options:nil] lastObject];
         }
-        cell.model = model;
+        [cell configure:model];
         return cell;
-    }else if (model.thumbnails.count == 1)
-    {
+    }else{
         YZUCPictureTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:YZUCPictureCell];
         if (!cell) {
             cell=[[[NSBundle mainBundle] loadNibNamed:@"YZUCPictureTableViewCell" owner:self options:nil] lastObject];
         }
-        cell.model = model;
+        [cell configure:model];
         return cell;
     }
-    return nil;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     YZUCNewsModel *model = self.dataSource[indexPath.row];
     CGFloat rowHeight = 0.0f;
-    if (model.thumbnails.count == 3) {
+    if (model.thumbnails.count >= 3) {
         rowHeight = isIpad() ? 200 : UCThreePictureRowHeight;
-    }else if(model.thumbnails.count == 1){
+    }else{
         rowHeight = isIpad() ? 150 : UCPictureRowHeight;
     }
     return rowHeight;

@@ -81,7 +81,7 @@
     
     NSArray *titles = @[@"内涵段子",@"快手",@"直播",@"二维码"];
     NSArray *images = @[@"content",@"gifShow",@"yingke",@"QR"];
-    NSArray <NSNumber *>*tags = @[@100,@101,@106,@109];
+    NSArray <NSNumber *>*tags = @[@100,@101,@106,@1002];
     
     CGFloat space = 10.0;
 #pragma mark - 2

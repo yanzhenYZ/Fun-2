@@ -46,7 +46,7 @@
     if (!cell) {
         cell = [[YZWalfarePictureTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"YZWalfarePictureTableViewCell"];
     }
-    cell.girlFrame = self.dataSource[indexPath.row];
+    [cell configure:self.dataSource[indexPath.row]];
     return cell;
 }
 

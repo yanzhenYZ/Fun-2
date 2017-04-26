@@ -10,5 +10,5 @@
 
 @class YZWalfareVideoFrame;
 @interface YZWalfareVideoTableViewCell : YZVideoTableViewCell
-@property (nonatomic, strong) YZWalfareVideoFrame *videoFrame;
+- (void)configure:(YZWalfareVideoFrame *)videoFrame;
 @end

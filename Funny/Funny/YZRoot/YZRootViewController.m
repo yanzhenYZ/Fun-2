@@ -73,7 +73,7 @@
     if (tag < YZAPPNAME_DRAWPICTURE) {
         [_firstVC widgetIntoViewController:tag];
     }else{
-        if (tag == 109) {
+        if (tag == 1002) {
             YZQRScanningViewController *vc = [[YZQRScanningViewController alloc] initWith3DTouch:YES];
             [self.navigationController presentViewController:vc animated:YES completion:nil];
         }else{

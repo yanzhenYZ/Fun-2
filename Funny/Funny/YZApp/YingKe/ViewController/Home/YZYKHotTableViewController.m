@@ -74,13 +74,14 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     YZYKHotTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"YZYKHotTableViewCell" forIndexPath:indexPath];
     YZYingKeModel *model = self.dataSource[indexPath.row];
-    cell.model = model;
+    [cell configureYK:model];
     return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    YZYKPlayerViewController *vc = [[YZYKPlayerViewController alloc] initWithYingKeModel:self.dataSource[indexPath.row]];
+    YZYingKeModel *model = self.dataSource[indexPath.row];
+    YZYKPlayerViewController *vc = [[YZYKPlayerViewController alloc] initWithStream_addr:model.stream_addr img:model.creator.portrait];
     vc.hidesBottomBarWhenPushed = YES;
     [_homeVC push];
     [self.navigationController pushViewController:vc animated:YES];

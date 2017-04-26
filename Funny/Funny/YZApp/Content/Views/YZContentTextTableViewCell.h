@@ -10,5 +10,5 @@
 
 @class YZContentTextFrame;
 @interface YZContentTextTableViewCell : YZTextTableViewCell
-@property (nonatomic, strong) YZContentTextFrame *textFrame;
+- (void)configure:(YZContentTextFrame *)textFrame;
 @end

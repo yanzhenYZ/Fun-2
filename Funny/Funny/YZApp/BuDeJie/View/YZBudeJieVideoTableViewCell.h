@@ -10,5 +10,5 @@
 
 @class YZBuDeJieVideoFrame;
 @interface YZBudeJieVideoTableViewCell : YZVideoTableViewCell
-@property (nonatomic, strong) YZBuDeJieVideoFrame *videoFrame;
+- (void)configure:(YZBuDeJieVideoFrame *)videoFrame;
 @end

@@ -13,11 +13,11 @@
 #define BUFFER_SIZE 1024 * 100
 #define YZLABELFONT 14
 
-@implementation YZVideoTableViewCell
+@interface YZVideoTableViewCell ()
 
--(BOOL)refresh{
-    return self.playBtn.selected || self.isPause;
-}
+@end
+
+@implementation YZVideoTableViewCell
 
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -103,6 +103,13 @@
     progressView.progress = 0.0;
     [self.contentView addSubview:progressView];
     self.progressView = progressView;
+}
+
+
+- (void)tableViewReload{
+    if (self.playBtn.selected || self.isPause) {
+        [[FunnyVideoPlayManage shareVideoManage] tableViewReload];
+    }
 }
 
 -(void)dealloc{

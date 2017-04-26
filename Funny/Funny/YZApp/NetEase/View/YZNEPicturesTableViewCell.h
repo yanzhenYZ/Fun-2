@@ -10,5 +10,5 @@
 
 @class YZNetEaseModel;
 @interface YZNEPicturesTableViewCell : UITableViewCell
-@property (nonatomic, strong) YZNetEaseModel *model;
+- (void)configure:(YZNetEaseModel *)model;
 @end

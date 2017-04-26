@@ -25,11 +25,11 @@
     return self;
 }
 
--(void)setModel:(YZGifshowModel *)model{
-    _model = model;
+- (void)configure:(YZGifshowModel *)model{
+    [self tableViewReload];
     self.shareURL = model.main_mv_url;
     [self.userView headViewWithheadImageUrlString:model.headurl name:model.user_name time:[model.time timeStringToLongLong]];
-    [self.mainImageView yz_setImageWithURL:model.thumbnail_url placeholderImage:@"Y&Z"];
+    [self.mainImageView yz_setImageWithURL:model.thumbnail_url];
     CGFloat mainHeight = (WIDTH - 100) / 3 * 4;
     self.mainImageView.frame = CGRectMake(50, 70.0, WIDTH - 100.0, mainHeight);
     self.progressView.frame = CGRectMake(self.mainImageView.x, self.mainImageView.maxY, WIDTH - 100, 2);

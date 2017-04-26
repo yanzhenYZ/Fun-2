@@ -55,7 +55,7 @@
 
 -(void)setUser:(YZContentUser *)user{
     _user = user;
-    [self.headImageView yz_setImageWithURL:user.avatar_url placeholderImage:@"Y&Z"];
+    [self.headImageView yz_setImageWithURL:user.avatar_url];
     self.userNameLabel.text = user.user_name;
     self.userTextLabel.text = user.text;
     self.userTextLabel.frame = CGRectMake(40.0, 55.0, WIDTH - 70, self.height - COMMENTVIEWSPACE);

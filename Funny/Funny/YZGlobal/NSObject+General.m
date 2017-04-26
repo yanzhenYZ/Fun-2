@@ -248,6 +248,12 @@ static void * key = (void *)@"AppName";
     UIImage *image = [UIImage imageNamed:imageName];
     [self sd_setImageWithURL:url placeholderImage:image];
 }
+
+- (void)yz_setImageWithURL:(NSString *)urlString{
+    NSURL *url = [NSURL URLWithString:urlString];
+    UIImage *image = [UIImage imageNamed:@"Y&Z"];
+    [self sd_setImageWithURL:url placeholderImage:image];
+}
 @end
 
 #pragma mark - UIImage

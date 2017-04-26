@@ -35,15 +35,14 @@
     return self;
 }
 
--(void)setGirlFrame:(YZWalfareGirlFrame *)girlFrame{
-    _girlFrame = girlFrame;
+- (void)configure:(YZWalfareGirlFrame *)girlFrame{
     self.contentLabel.frame  = girlFrame.contentLabelFrame;
     self.mainImageView.frame = girlFrame.mainIVFrame;
     self.backView.frame      = girlFrame.backViewFrame;
     
     self.creatTimeLabel.text = [NSString dateWithTimeInterval:girlFrame.girlModel.update_time.longLongValue];
     self.contentLabel.text = girlFrame.girlModel.wbody;
-    [self.mainImageView yz_setImageWithURL:girlFrame.girlModel.wpic_middle placeholderImage:@"Y&Z"];
+    [self.mainImageView yz_setImageWithURL:girlFrame.girlModel.wpic_middle];
 }
 
 @end

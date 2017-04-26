@@ -37,15 +37,15 @@
     return self;
 }
 
--(void)setVideoFrame:(YZContentVideoFrame *)videoFrame{
-    _videoFrame = videoFrame;
+- (void)configure:(YZContentVideoFrame *)videoFrame{
+    [self tableViewReload];
     self.shareURL   = videoFrame.contentModel.group.video_720p.url_list[0][@"url"];
     self.shareTitle = videoFrame.contentModel.group.text;
     
     YZContentGroup *group = videoFrame.contentModel.group;
     [self.userView headViewWithheadImageUrlString:group.user.avatar_url name:group.user.name time:group.create_time.longLongValue];
     self.contentLabel.text = group.text;
-    [self.mainImageView yz_setImageWithURL:group.large_cover.url_list[0][@"url"] placeholderImage:@"Y&Z"];
+    [self.mainImageView yz_setImageWithURL:group.large_cover.url_list[0][@"url"]];
     
     self.userView.frame = CGRectMake(CONTENTSPACE * 2, CONTENTSPACE, WIDTH - 4 * CONTENTSPACE, USERVIEWHEIGHT);
     self.contentLabel.frame = videoFrame.contentLabelFrame;

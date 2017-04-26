@@ -19,21 +19,27 @@
                 if (granted) {
                     NSLog(@"--用户开启摄像头--");
                 }
-                handler(granted);
+                if (handler) {
+                    handler(granted);
+                }
             }];
             break;
         }
         case AVAuthorizationStatusAuthorized: {
             // 已经开启授权，可继续
             NSLog(@"--用户开启摄像头--");
-            handler(YES);
+            if (handler) {
+                handler(YES);
+            }
             break;
         }
         case AVAuthorizationStatusDenied:
         case AVAuthorizationStatusRestricted:
             // 用户明确地拒绝授权，或者相机设备无法访问
             NSLog(@"--用户拒绝开启摄像头--");
-            handler(NO);
+            if (handler) {
+                handler(NO);
+            }
             break;
         default:
             break;

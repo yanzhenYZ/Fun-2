@@ -32,8 +32,7 @@
     return self;
 }
 
--(void)setTextFrame:(YZContentTextFrame *)textFrame{
-    _textFrame = textFrame;
+- (void)configure:(YZContentTextFrame *)textFrame{
     YZContentGroup *group = textFrame.contentModel.group;
     [self.userView headViewWithheadImageUrlString:group.user.avatar_url name:group.user.name time:group.create_time.longLongValue];
     self.userView.frame =  CGRectMake(CONTENTSPACE * 2, CONTENTSPACE, WIDTH - 4 * CONTENTSPACE, USERVIEWHEIGHT);

@@ -46,7 +46,7 @@
     if (!cell) {
         cell = [[YZWalfareTextTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"YZWalfareTextTableViewCell"];
     }
-    cell.textFrame = self.dataSource[indexPath.row];
+    [cell configure:self.dataSource[indexPath.row]];
     return cell;
 }
 

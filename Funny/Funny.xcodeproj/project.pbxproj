@@ -107,9 +107,7 @@
 		9B5F02E61DF7BCD400C9CE69 /* ExtensionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B5F02E21DF7BCD400C9CE69 /* ExtensionButton.m */; };
 		9B5F02E71DF7BCD400C9CE69 /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B5F02E31DF7BCD400C9CE69 /* Image.xcassets */; };
 		9B5F02E81DF7BCD400C9CE69 /* YZCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B5F02E51DF7BCD400C9CE69 /* YZCircleView.m */; };
-		9B5F02EA1DF7BD6800C9CE69 /* YZIPhoneDevice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B5F02E91DF7BD6800C9CE69 /* YZIPhoneDevice.framework */; };
 		9B5F10151DFFCEBC00C9CE69 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B5F10141DFFCEBC00C9CE69 /* IJKMediaFramework.framework */; };
-		9B5F101A1DFFCF8200C9CE69 /* YZUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B5F10191DFFCF8200C9CE69 /* YZUIKit.framework */; };
 		9B5F11C81DFFCFD900C9CE69 /* lookup.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B5F101D1DFFCFD800C9CE69 /* lookup.png */; };
 		9B5F11C91DFFCFD900C9CE69 /* lookup_amatorka.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B5F101E1DFFCFD800C9CE69 /* lookup_amatorka.png */; };
 		9B5F11CA1DFFCFD900C9CE69 /* lookup_miss_etikate.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B5F101F1DFFCFD800C9CE69 /* lookup_miss_etikate.png */; };
@@ -346,6 +344,8 @@
 		9B5F13091E00F12100C9CE69 /* YZYKDeclarationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B5F13071E00F12100C9CE69 /* YZYKDeclarationViewController.xib */; };
 		9B5F130D1E00F14300C9CE69 /* YZYKBeautyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B5F130B1E00F14300C9CE69 /* YZYKBeautyViewController.m */; };
 		9B5F130E1E00F14300C9CE69 /* YZYKBeautyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B5F130C1E00F14300C9CE69 /* YZYKBeautyViewController.xib */; };
+		9B67AE831E9C865500CE4B48 /* YZSLiveHotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B67AE821E9C865500CE4B48 /* YZSLiveHotViewController.m */; };
+		9B67AE861E9C891E00CE4B48 /* YZSLiveModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B67AE851E9C891E00CE4B48 /* YZSLiveModel.m */; };
 		9BD24DD81E091155001ED9DF /* YZClipImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD24DD71E091155001ED9DF /* YZClipImageViewController.m */; };
 		9BD24DDB1E0911DC001ED9DF /* YZClipImageMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD24DDA1E0911DC001ED9DF /* YZClipImageMaskView.m */; };
 		9BDDDF851DE6F08A001BD7BC /* YZRootFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDDDF841DE6F08A001BD7BC /* YZRootFirstViewController.m */; };
@@ -657,9 +657,7 @@
 		9B5F02E31DF7BCD400C9CE69 /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
 		9B5F02E41DF7BCD400C9CE69 /* YZCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZCircleView.h; sourceTree = "<group>"; };
 		9B5F02E51DF7BCD400C9CE69 /* YZCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZCircleView.m; sourceTree = "<group>"; };
-		9B5F02E91DF7BD6800C9CE69 /* YZIPhoneDevice.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YZIPhoneDevice.framework; path = Today/YZIPhoneDevice.framework; sourceTree = "<group>"; };
 		9B5F10141DFFCEBC00C9CE69 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IJKMediaFramework.framework; path = Funny/YZLib/YingKe/IJKMediaFramework.framework; sourceTree = "<group>"; };
-		9B5F10191DFFCF8200C9CE69 /* YZUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YZUIKit.framework; path = Funny/YZLib/YZ/YZUIKit.framework; sourceTree = "<group>"; };
 		9B5F101D1DFFCFD800C9CE69 /* lookup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lookup.png; sourceTree = "<group>"; };
 		9B5F101E1DFFCFD800C9CE69 /* lookup_amatorka.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lookup_amatorka.png; sourceTree = "<group>"; };
 		9B5F101F1DFFCFD800C9CE69 /* lookup_miss_etikate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lookup_miss_etikate.png; sourceTree = "<group>"; };
@@ -1131,6 +1129,10 @@
 		9B5F130A1E00F14300C9CE69 /* YZYKBeautyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZYKBeautyViewController.h; sourceTree = "<group>"; };
 		9B5F130B1E00F14300C9CE69 /* YZYKBeautyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZYKBeautyViewController.m; sourceTree = "<group>"; };
 		9B5F130C1E00F14300C9CE69 /* YZYKBeautyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YZYKBeautyViewController.xib; sourceTree = "<group>"; };
+		9B67AE811E9C865500CE4B48 /* YZSLiveHotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZSLiveHotViewController.h; sourceTree = "<group>"; };
+		9B67AE821E9C865500CE4B48 /* YZSLiveHotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZSLiveHotViewController.m; sourceTree = "<group>"; };
+		9B67AE841E9C891E00CE4B48 /* YZSLiveModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZSLiveModel.h; sourceTree = "<group>"; };
+		9B67AE851E9C891E00CE4B48 /* YZSLiveModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZSLiveModel.m; sourceTree = "<group>"; };
 		9BD24DD61E091155001ED9DF /* YZClipImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZClipImageViewController.h; sourceTree = "<group>"; };
 		9BD24DD71E091155001ED9DF /* YZClipImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZClipImageViewController.m; sourceTree = "<group>"; };
 		9BD24DD91E0911DC001ED9DF /* YZClipImageMaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZClipImageMaskView.h; sourceTree = "<group>"; };
@@ -1351,7 +1353,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B5F101A1DFFCF8200C9CE69 /* YZUIKit.framework in Frameworks */,
 				9B5F10151DFFCEBC00C9CE69 /* IJKMediaFramework.framework in Frameworks */,
 				9B59B5E81DEEB760001D2F70 /* libc++.tbd in Frameworks */,
 				9B59B5E41DEEB5B7001D2F70 /* libz.tbd in Frameworks */,
@@ -1366,7 +1367,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B5F02EA1DF7BD6800C9CE69 /* YZIPhoneDevice.framework in Frameworks */,
 				9B5F02CF1DF7BBCB00C9CE69 /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1569,9 +1569,7 @@
 		9B59B5D81DEEB50D001D2F70 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9B5F10191DFFCF8200C9CE69 /* YZUIKit.framework */,
 				9B5F10141DFFCEBC00C9CE69 /* IJKMediaFramework.framework */,
-				9B5F02E91DF7BD6800C9CE69 /* YZIPhoneDevice.framework */,
 				9B59B5E71DEEB760001D2F70 /* libc++.tbd */,
 				9B59B5E51DEEB5CB001D2F70 /* libsqlite3.0.tbd */,
 				9B59B5E31DEEB5B7001D2F70 /* libz.tbd */,
@@ -2467,6 +2465,33 @@
 			path = My;
 			sourceTree = "<group>";
 		};
+		9B67AE7E1E9C863300CE4B48 /* SLive */ = {
+			isa = PBXGroup;
+			children = (
+				9B67AE7F1E9C863300CE4B48 /* Model */,
+				9B67AE801E9C863300CE4B48 /* ViewController */,
+			);
+			path = SLive;
+			sourceTree = "<group>";
+		};
+		9B67AE7F1E9C863300CE4B48 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9B67AE841E9C891E00CE4B48 /* YZSLiveModel.h */,
+				9B67AE851E9C891E00CE4B48 /* YZSLiveModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9B67AE801E9C863300CE4B48 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9B67AE811E9C865500CE4B48 /* YZSLiveHotViewController.h */,
+				9B67AE821E9C865500CE4B48 /* YZSLiveHotViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		9BD24DD51E09113E001ED9DF /* YZClipImageLib */ = {
 			isa = PBXGroup;
 			children = (
@@ -2540,6 +2565,7 @@
 		9BDDDF991DE7E7C8001BD7BC /* YZApp */ = {
 			isa = PBXGroup;
 			children = (
+				9B67AE7E1E9C863300CE4B48 /* SLive */,
 				9B5F12951DFFD17B00C9CE69 /* YingKe */,
 				9B59B6271DF01520001D2F70 /* DrawPicture */,
 				9B59B6051DEFC3CE001D2F70 /* NetEase */,
@@ -3211,6 +3237,7 @@
 				9B5F11F71DFFCFD900C9CE69 /* GPUImageExclusionBlendFilter.m in Sources */,
 				9B59B5FC1DEECC60001D2F70 /* YZUCPictureTableViewCell.m in Sources */,
 				9B5F127E1DFFCFD900C9CE69 /* VideoEncoder.m in Sources */,
+				9B67AE861E9C891E00CE4B48 /* YZSLiveModel.m in Sources */,
 				9BECC8791DED6E5C008384D8 /* YZBuDeJieTextFrame.m in Sources */,
 				9BECC86A1DED6812008384D8 /* YZBuDeJieVideoViewController.m in Sources */,
 				9B5F11D91DFFCFD900C9CE69 /* GPUImageBuffer.m in Sources */,
@@ -3389,6 +3416,7 @@
 				9B5F11EE1DFFCFD900C9CE69 /* GPUImageDarkenBlendFilter.m in Sources */,
 				9B5F124B1DFFCFD900C9CE69 /* GPUImageSepiaFilter.m in Sources */,
 				9B05BE801DF5407800BEAF96 /* YZNoteViewController.m in Sources */,
+				9B67AE831E9C865500CE4B48 /* YZSLiveHotViewController.m in Sources */,
 				9B5F120A1DFFCFD900C9CE69 /* GPUImageHazeFilter.m in Sources */,
 				9B59B6111DEFCAB9001D2F70 /* NetEaseMacro.m in Sources */,
 				9B5F11FD1DFFCFD900C9CE69 /* GPUImageFilterPipeline.m in Sources */,
@@ -3703,7 +3731,7 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Funny/YZLib/YZ",
+					"$(SRCROOT)/../framework/YZUIKit/framework$(EFFECTIVE_PLATFORM_NAME)",
 					"$(PROJECT_DIR)/Funny/YZLib/YingKe",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Funny/Funny-Prefix.pch";
@@ -3719,7 +3747,11 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Funny/YZLib/WeChatSDK1.7.5",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-framework",
+					YZUIKit,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.v2tech.BCYZ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -3735,7 +3767,7 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Funny/YZLib/YZ",
+					"$(SRCROOT)/../framework/YZUIKit/framework$(EFFECTIVE_PLATFORM_NAME)",
 					"$(PROJECT_DIR)/Funny/YZLib/YingKe",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Funny/Funny-Prefix.pch";
@@ -3747,7 +3779,11 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Funny/YZLib/WeChatSDK1.7.5",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-framework",
+					YZUIKit,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.v2tech.BCYZ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -3761,10 +3797,14 @@
 				DEVELOPMENT_TEAM = M7R5TQ8AQY;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Today",
+					"$(SRCROOT)/../framework/YZDevice/framework$(EFFECTIVE_PLATFORM_NAME)",
 				);
 				INFOPLIST_FILE = Today/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				OTHER_LDFLAGS = (
+					"-framework",
+					YZIPhoneDevice,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.v2tech.BCYZ.Today;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -3778,10 +3818,14 @@
 				DEVELOPMENT_TEAM = M7R5TQ8AQY;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Today",
+					"$(SRCROOT)/../framework/YZDevice/framework$(EFFECTIVE_PLATFORM_NAME)",
 				);
 				INFOPLIST_FILE = Today/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				OTHER_LDFLAGS = (
+					"-framework",
+					YZIPhoneDevice,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.v2tech.BCYZ.Today;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

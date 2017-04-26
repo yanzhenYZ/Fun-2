@@ -77,14 +77,14 @@
         if (!cell) {
             cell = [[[NSBundle mainBundle] loadNibNamed:@"YZNEPicturesTableViewCell" owner:self options:nil] lastObject];
         }
-        cell.model = model;
+        [cell configure:model];
         return cell;
     }else{
         YZNEPictureTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"YZNEPictureTableViewCell"];
         if (!cell) {
             cell = [[[NSBundle mainBundle] loadNibNamed:@"YZNEPictureTableViewCell" owner:self options:nil] lastObject];
         }
-        cell.model = model;
+        [cell configure:model];
         return cell;
     }
 }

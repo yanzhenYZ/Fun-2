@@ -12,6 +12,8 @@
 #import "YZHorizontalLayout.h"
 #import "YZCircularLayout.h"
 
+#import "YZKeychainManager.h"
+
 //! Project version number for YZUIKit.
 FOUNDATION_EXPORT double YZUIKitVersionNumber;
 

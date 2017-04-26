@@ -28,5 +28,6 @@
 @property (nonatomic, copy) NSString *shareURL;
 @property (nonatomic, assign) CGFloat rightSpace;
 @property (nonatomic, assign) BOOL isPause;
-@property (nonatomic, readonly) BOOL refresh;
+
+- (void)tableViewReload;
 @end

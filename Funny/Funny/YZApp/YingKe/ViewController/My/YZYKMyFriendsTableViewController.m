@@ -48,10 +48,8 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    YZYingKeModel *model = [[YZYingKeModel alloc] init];
-    model.stream_addr = [NSString stringWithFormat:YK_Live_Header,self.dataSource[indexPath.row].liveAddress];
-    NSLog(@"TTTT:%@",model.stream_addr);
-    YZYKPlayerViewController *vc = [[YZYKPlayerViewController alloc] initWithYingKeModel:model];
+    NSString *stream = [NSString stringWithFormat:YK_Live_Header,self.dataSource[indexPath.row].liveAddress];
+    YZYKPlayerViewController *vc = [[YZYKPlayerViewController alloc] initWithStream_addr:stream img:nil];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

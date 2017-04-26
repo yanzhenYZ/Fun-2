@@ -68,11 +68,7 @@
         cell = [[YZContentVideoTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"YZContentVideoTableViewCell"];
         cell.delegate = self;
     }
-    if (cell.refresh) {
-        [[FunnyVideoPlayManage shareVideoManage] tableViewReload];
-        cell.playBtn.selected = NO;
-    }
-    cell.videoFrame = self.dataSource[indexPath.row];
+    [cell configure:self.dataSource[indexPath.row]];
     return cell;
 }
 

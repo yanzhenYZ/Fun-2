@@ -27,8 +27,7 @@
 }
 
 
--(void)setTextFrame:(YZBuDeJieTextFrame *)textFrame{
-    _textFrame = textFrame;
+- (void)configure:(YZBuDeJieTextFrame *)textFrame{
     YZBudeJieTextModel *model = textFrame.textModel;
     [self.userView headViewWithheadImageUrlString:model.profile_image name:model.name timeString:model.create_time];
     self.mainTextLabel.text = model.text;

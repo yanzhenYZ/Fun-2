@@ -10,5 +10,5 @@
 
 @class YZYingKeModel;
 @interface YZYKPlayerViewController : UIViewController
-- (instancetype)initWithYingKeModel:(YZYingKeModel *)model;
+- (instancetype)initWithStream_addr:(NSString *)stream img:(NSString *)image;
 @end

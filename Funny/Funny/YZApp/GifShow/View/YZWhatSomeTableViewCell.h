@@ -10,5 +10,5 @@
 
 @class YZWhatSomeFrame;
 @interface YZWhatSomeTableViewCell : YZPictureTableViewCell
-@property (nonatomic, strong) YZWhatSomeFrame *pictureFrame;
+- (void)configure:(YZWhatSomeFrame *)pictureFrame;
 @end

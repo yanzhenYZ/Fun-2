@@ -67,7 +67,7 @@
     if (!cell) {
         cell = [[YZContentTextTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"YZContentTextTableViewCell"];
     }
-    cell.textFrame = self.dataSource[indexPath.row];
+    [cell configure:self.dataSource[indexPath.row]];
     return cell;
 }
 

@@ -26,8 +26,7 @@
     return self;
 }
 
--(void)setTextFrame:(YZWalfareTextFrame *)textFrame{
-    _textFrame = textFrame;
+- (void)configure:(YZWalfareTextFrame *)textFrame{
     self.mainTextLabel.frame = textFrame.mainLabelFrame;
     self.backView.frame = textFrame.backViewFrame;
     

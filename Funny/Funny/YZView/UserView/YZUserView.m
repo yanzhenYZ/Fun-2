@@ -44,7 +44,7 @@
 }
 
 - (void)headViewWithheadImageUrlString:(NSString *)headImageUrlString name:(NSString *)name timeString:(NSString *)time{
-    [self.headImageView yz_setImageWithURL:headImageUrlString placeholderImage:@"Y&Z"];
+    [self.headImageView yz_setImageWithURL:headImageUrlString];
     self.userNameLabel.text = name;
     self.creatTimeLabel.text = time;
 }

@@ -50,6 +50,7 @@
 #pragma mark - UIImageView
 @interface UIImageView (General)
 - (void)yz_setImageWithURL:(NSString *)urlString placeholderImage:(NSString *)imageName;
+- (void)yz_setImageWithURL:(NSString *)urlString;
 @end
 
 #pragma mark - UIImage

@@ -10,5 +10,5 @@
 
 @class YZBuDeJieTextFrame;
 @interface YZBuDeJieTextTableViewCell : YZTextTableViewCell
-@property (nonatomic, strong) YZBuDeJieTextFrame *textFrame;
+- (void)configure:(YZBuDeJieTextFrame *)textFrame;
 @end

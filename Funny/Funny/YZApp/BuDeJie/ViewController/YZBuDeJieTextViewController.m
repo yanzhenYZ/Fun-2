@@ -55,7 +55,7 @@
     if (!cell) {
         cell = [[YZBuDeJieTextTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"YZBuDeJieTextTableViewCell"];
     }
-    cell.textFrame = self.dataSource[indexPath.row];
+    [cell configure:self.dataSource[indexPath.row]];
     return cell;
 }
 

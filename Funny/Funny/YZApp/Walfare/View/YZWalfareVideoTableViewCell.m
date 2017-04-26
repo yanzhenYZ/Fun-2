@@ -33,8 +33,8 @@
     return self;
 }
 
--(void)setVideoFrame:(YZWalfareVideoFrame *)videoFrame{
-    _videoFrame     = videoFrame;
+- (void)configure:(YZWalfareVideoFrame *)videoFrame{
+    [self tableViewReload];
     self.shareURL   = videoFrame.videoModel.vplay_url;
     self.shareTitle = videoFrame.videoModel.wbody;
     self.contentLabel.frame  = videoFrame.contentLabelFrame;
@@ -45,7 +45,7 @@
     
     self.creatTimeLabel.text = [NSString dateWithTimeInterval:videoFrame.videoModel.update_time.longLongValue];
     self.contentLabel.text = videoFrame.videoModel.wbody;
-    [self.mainImageView yz_setImageWithURL:videoFrame.videoModel.vpic_small placeholderImage:@"Y&Z"];
+    [self.mainImageView yz_setImageWithURL:videoFrame.videoModel.vpic_small];
     
 }
 

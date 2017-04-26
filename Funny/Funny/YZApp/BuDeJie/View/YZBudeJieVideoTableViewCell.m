@@ -34,8 +34,8 @@
 }
 
 
--(void)setVideoFrame:(YZBuDeJieVideoFrame *)videoFrame{
-    _videoFrame = videoFrame;
+- (void)configure:(YZBuDeJieVideoFrame *)videoFrame{
+    [self tableViewReload];
     self.shareURL   = videoFrame.videoModel.videouri;
     self.shareTitle = videoFrame.videoModel.text;
     YZBudeJieVideoModel *model = videoFrame.videoModel;
@@ -43,7 +43,7 @@
     self.contentLabel.text = model.text;
     self.contentLabel.frame = videoFrame.contentLabelFrame;
     self.mainImageView.frame = videoFrame.mainIVFrame;
-    [self.mainImageView yz_setImageWithURL:model.bimageuri placeholderImage:@"Y&Z"];
+    [self.mainImageView yz_setImageWithURL:model.bimageuri];
     self.playBtn.frame = videoFrame.playBtnFrame;
     self.progressView.frame = videoFrame.progressViewFrame;
     self.backView.frame = videoFrame.backViewFrame;

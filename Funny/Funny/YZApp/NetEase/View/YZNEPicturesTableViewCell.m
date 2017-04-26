@@ -19,14 +19,13 @@
 
 @implementation YZNEPicturesTableViewCell
 
--(void)setModel:(YZNetEaseModel *)model{
-    _model = model;
+- (void)configure:(YZNetEaseModel *)model{
     _titleLab.text = model.title;
-    [_leftIV yz_setImageWithURL:model.imgsrc placeholderImage:@"Y&Z"];
+    [_leftIV yz_setImageWithURL:model.imgsrc];
     YZImgsrcModel *imgsrc = model.imgextra[0];
-    [_middleIV yz_setImageWithURL:imgsrc.imgsrc placeholderImage:@"Y&Z"];
+    [_middleIV yz_setImageWithURL:imgsrc.imgsrc];
     imgsrc = model.imgextra[1];
-    [_rightIV yz_setImageWithURL:imgsrc.imgsrc placeholderImage:@"Y&Z"];
+    [_rightIV yz_setImageWithURL:imgsrc.imgsrc];
 }
 
 - (void)awakeFromNib {

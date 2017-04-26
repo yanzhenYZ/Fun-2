@@ -84,11 +84,7 @@
         cell = [[YZGifshowTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"YZGifshowTableViewCell"];
         cell.delegate = self;
     }
-    if (cell.refresh) {
-        [[FunnyVideoPlayManage shareVideoManage] tableViewReload];
-        cell.playBtn.selected = NO;
-    }
-    cell.model = self.dataSource[indexPath.row];
+    [cell configure:self.dataSource[indexPath.row]];
     return cell;
 }
 

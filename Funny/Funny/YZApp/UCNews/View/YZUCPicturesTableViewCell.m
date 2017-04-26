@@ -20,16 +20,15 @@
 
 @implementation YZUCPicturesTableViewCell
 
--(void)setModel:(YZUCNewsModel *)model{
-    _model = model;
+- (void)configure:(YZUCNewsModel *)model{
     _titleLab.text = model.title;
     //
     YZUCPictureModel *pictureModel = model.thumbnails[0];
     YZUCPictureModel *pictureModel1 = model.thumbnails[1];
     YZUCPictureModel *pictureModel2 = model.thumbnails[2];
-    [_leftIV yz_setImageWithURL:pictureModel.url placeholderImage:@"Y&Z"];
-    [_middleIV yz_setImageWithURL:pictureModel1.url placeholderImage:@"Y&Z"];
-    [_rightIV yz_setImageWithURL:pictureModel2.url placeholderImage:@"Y&Z"];
+    [_leftIV yz_setImageWithURL:pictureModel.url];
+    [_middleIV yz_setImageWithURL:pictureModel1.url];
+    [_rightIV yz_setImageWithURL:pictureModel2.url];
     //
     long long time = model.publish_time.longLongValue / 1000;
     NSString *bottomString = [NSString dateWithTimeInterval:time];

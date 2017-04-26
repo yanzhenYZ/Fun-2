@@ -68,7 +68,7 @@
     if (!cell) {
         cell = [[YZWhatSomeTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"YZWhatSomeTableViewCell"];
     }
-    cell.pictureFrame = self.dataSource[indexPath.row];
+    [cell configure:self.dataSource[indexPath.row]];
     return cell;
 }
 

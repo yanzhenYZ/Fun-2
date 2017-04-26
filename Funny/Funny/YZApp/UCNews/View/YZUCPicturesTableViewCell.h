@@ -10,5 +10,5 @@
 
 @class YZUCNewsModel;
 @interface YZUCPicturesTableViewCell : UITableViewCell
-@property (nonatomic, strong) YZUCNewsModel *model;
+- (void)configure:(YZUCNewsModel *)model;
 @end

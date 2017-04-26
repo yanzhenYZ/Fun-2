@@ -19,10 +19,9 @@
 
 @implementation YZUCPictureTableViewCell
 
--(void)setModel:(YZUCNewsModel *)model{
-    _model = model;
+- (void)configure:(YZUCNewsModel *)model{
     YZUCPictureModel *pictureModel = model.thumbnails[0];
-    [_imageV yz_setImageWithURL:pictureModel.url placeholderImage:@"Y&Z"];
+    [_imageV yz_setImageWithURL:pictureModel.url];
     _titleLab.text = model.title;
     
     long long time = model.publish_time.longLongValue / 1000;

@@ -7,12 +7,12 @@
 //
 
 #import "YZYKPlayerViewController.h"
-#import "YZYingKeModel.h"
 //https://github.com/Bilibili/ijkplayer
 #import <IJKMediaFramework/IJKMediaFramework.h>
 
 @interface YZYKPlayerViewController ()
-@property (nonatomic, strong) YZYingKeModel *model;
+@property (nonatomic, copy) NSString *stream_addr;
+@property (nonatomic, copy) NSString *image;
 
 @property(atomic, retain) id<IJKMediaPlayback> player;
 
@@ -25,9 +25,10 @@
 
 @implementation YZYKPlayerViewController
 
-- (instancetype)initWithYingKeModel:(YZYingKeModel *)model{
+- (instancetype)initWithStream_addr:(NSString *)stream img:(NSString *)image{
     if (self = [super init]) {
-        _model = model;
+        _stream_addr = stream;
+        _image = image;
     }
     return self;
 }
@@ -68,7 +69,7 @@
     
     IJKFFOptions *options = [IJKFFOptions optionsByDefault];
 //    self.player = [[IJKFFMoviePlayerController alloc] initWithContentURLString:@"rtmp://live.hkstv.hk.lxdns.com:1935/live/Funny" withOptions:options];
-    self.player = [[IJKFFMoviePlayerController alloc] initWithContentURLString:self.model.stream_addr withOptions:options];
+    self.player = [[IJKFFMoviePlayerController alloc] initWithContentURLString:_stream_addr withOptions:options];
     //rtmp://live.hkstv.hk.lxdns.com:1935/live/Funny
     self.player.view.frame = self.view.bounds;
     self.player.shouldAutoplay = YES;
@@ -76,7 +77,7 @@
     
     //添加图片
     UIImageView * imageView = [[UIImageView alloc] initWithFrame:self.view.bounds];
-    [imageView yz_setImageWithURL:self.model.creator.portrait placeholderImage:@"default_room"];
+    [imageView yz_setImageWithURL:_image placeholderImage:@"default_room"];
     [self.view addSubview:imageView];
     _loadBlurImage = imageView;
     //  创建需要的毛玻璃特效类型

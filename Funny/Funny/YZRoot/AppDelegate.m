@@ -63,7 +63,7 @@ void FunnyUncaughtExceptionHandler(NSException *exception){
     UIApplicationShortcutIcon *icon1 = [UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypePlay];
     UIApplicationShortcutIcon *icon2 = [UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeCaptureVideo];
     UIApplicationShortcutIcon *icon3 = [UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeShuffle];
-    NSArray *items = @[itemBlock(@"106",@"直播",icon2),itemBlock(@"100",@"内涵段子",icon1),itemBlock(@"109",@"扫一扫",icon3)];
+    NSArray *items = @[itemBlock(@"106",@"直播",icon2),itemBlock(@"100",@"内涵段子",icon1),itemBlock(@"1002",@"扫一扫",icon3)];
     [UIApplication sharedApplication].shortcutItems = items;
 }
 

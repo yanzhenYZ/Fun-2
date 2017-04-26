@@ -180,9 +180,8 @@ static const CGFloat SCANWH = 300.0;
 }
 
 - (void)liveAction:(NSString *)value{
-    YZYingKeModel *model = [[YZYingKeModel alloc] init];
 //    model.stream_addr = [NSString stringWithFormat:YK_Live_Header,@"1481618515_4EFB6FC4-617E-48FB-B93F-F561795125EC"];
-    model.stream_addr = [NSString stringWithFormat:YK_Live_Header,value];
+    NSString *stream_addr = [NSString stringWithFormat:YK_Live_Header,value];
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"扫描结果" message:value preferredStyle:UIAlertControllerStyleAlert];
     [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
         textField.placeholder = @"输入好友的名字";
@@ -200,7 +199,7 @@ static const CGFloat SCANWH = 300.0;
         name = name.length > 0 ? name : @"好友";
         YZYKDBModel *live = [[YZYKDBModel alloc] initWithName:name address:value];
         [YZDBManager addLive:live];
-        YZYKPlayerViewController *vc = [[YZYKPlayerViewController alloc] initWithYingKeModel:model];
+        YZYKPlayerViewController *vc = [[YZYKPlayerViewController alloc] initWithStream_addr:stream_addr img:nil];
         [blockself.navigationController pushViewController:vc animated:YES];
     }];
     [alert addAction:liveAction];

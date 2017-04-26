@@ -49,11 +49,7 @@
         cell = [[YZWalfareVideoTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"YZWalfareVideoTableViewCell"];
         cell.delegate = self;
     }
-    if (cell.refresh) {
-        [[FunnyVideoPlayManage shareVideoManage] tableViewReload];
-        cell.playBtn.selected = NO;
-    }
-    cell.videoFrame = self.dataSource[indexPath.row];
+    [cell configure:self.dataSource[indexPath.row]];
     return cell;
 }
 

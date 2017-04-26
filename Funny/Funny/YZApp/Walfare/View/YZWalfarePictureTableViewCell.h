@@ -10,5 +10,5 @@
 
 @class YZWalfareGirlFrame;
 @interface YZWalfarePictureTableViewCell : YZPictureTableViewCell
-@property (nonatomic, strong) YZWalfareGirlFrame *girlFrame;
+- (void)configure:(YZWalfareGirlFrame *)girlFrame;
 @end

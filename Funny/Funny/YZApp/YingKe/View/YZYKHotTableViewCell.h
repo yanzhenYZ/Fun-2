@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class YZSLiveModel;
 @class YZYingKeModel;
 @interface YZYKHotTableViewCell : UITableViewCell
-@property (nonatomic, strong) YZYingKeModel *model;
+
+- (void)configureYK:(YZYingKeModel *)model;
+- (void)configureSLive:(YZSLiveModel *)model;
 @end

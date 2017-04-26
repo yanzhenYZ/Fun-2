@@ -10,5 +10,5 @@
 
 @class YZGifshowModel;
 @interface YZGifshowTableViewCell : YZVideoTableViewCell
-@property (nonatomic, strong) YZGifshowModel *model;
+- (void)configure:(YZGifshowModel *)model;
 @end

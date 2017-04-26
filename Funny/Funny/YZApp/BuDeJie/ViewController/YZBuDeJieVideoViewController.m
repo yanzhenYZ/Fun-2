@@ -59,11 +59,7 @@
         cell = [[YZBudeJieVideoTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"YZBudeJieVideoTableViewCell"];
         cell.delegate = self;
     }
-    if (cell.refresh) {
-        [[FunnyVideoPlayManage shareVideoManage] tableViewReload];
-        cell.playBtn.selected = NO;
-    }
-    cell.videoFrame = self.dataSource[indexPath.row];
+    [cell configure:self.dataSource[indexPath.row]];
     return cell;
 }
 
