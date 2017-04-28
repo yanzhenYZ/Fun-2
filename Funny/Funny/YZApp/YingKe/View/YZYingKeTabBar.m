@@ -21,7 +21,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        UIButton *(^btnBlock)(NSInteger tag,NSString *imageName) = ^(NSInteger tag,NSString *imageName){
+        UIButton *(^btnBlock)() = ^(NSInteger tag,NSString *imageName){
             UIButton *btn = [[UIButton alloc] init];
             btn.adjustsImageWhenHighlighted = NO;
             [btn setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];

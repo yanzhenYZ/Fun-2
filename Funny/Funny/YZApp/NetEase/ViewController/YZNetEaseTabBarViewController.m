@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    UINavigationController *(^nvcBlock)(YZNVCModel *model) = ^(YZNVCModel *model){
+    UINavigationController *(^nvcBlock)() = ^(YZNVCModel *model){
         YZNetEaseViewController *vc = [[NSClassFromString(model.vcName) alloc] init];
         vc.defaultURL = model.strings[0];
         vc.pushURL    = model.strings[1];

@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    UINavigationController *(^nvcBlock)(YZNVCModel *model) = ^(YZNVCModel *model){
+    UINavigationController *(^nvcBlock)() = ^(YZNVCModel *model){
         YZContentViewController *vc = [[NSClassFromString(model.vcName) alloc] init];
         vc.pullHeaderStr = model.strings[0];
         vc.pullFooterStr = model.strings[1];

@@ -21,7 +21,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         NSArray *titles = @[@"热门",@"附近"];
-        UIButton *(^btnBlock)(NSInteger tag) = ^(NSInteger tag){
+        UIButton *(^btnBlock)() = ^(NSInteger tag){
             UIButton *btn = [[UIButton alloc] init];
             CGFloat btnW = self.width / titles.count;
             CGFloat btnX = btnW * (tag - 100);

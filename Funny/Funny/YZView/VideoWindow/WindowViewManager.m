@@ -92,7 +92,7 @@ MShareInstance(WindowViewManager)
 
 - (void)videoPlayOrPause:(UIButton *)playBtn{
     
-    void (^block)(BOOL pause) = ^(BOOL pause){
+    void (^playBlock)(BOOL pause) = ^(BOOL pause){
         _isPause = pause;
         playBtn.selected = pause;
         _isPlaying = !pause;
@@ -106,10 +106,10 @@ MShareInstance(WindowViewManager)
     };
     
     if (_isPlaying) {
-        block(YES);
+        playBlock(YES);
     }else{
         if (_isPause) {
-            block(NO);
+            playBlock(NO);
         }else{
             [self startPlayVideo:_urlString];
         }

@@ -56,7 +56,7 @@ void FunnyUncaughtExceptionHandler(NSException *exception){
 }
 
 - (void)config3DTouch{
-    UIApplicationShortcutItem *(^itemBlock)(NSString *type,NSString *title,UIApplicationShortcutIcon *icon) = ^(NSString *type,NSString *title,UIApplicationShortcutIcon *icon){
+    UIApplicationShortcutItem *(^itemBlock)() = ^(NSString *type,NSString *title,UIApplicationShortcutIcon *icon){
         UIApplicationShortcutItem *item = [[UIApplicationShortcutItem alloc] initWithType:type localizedTitle:title localizedSubtitle:nil icon:icon userInfo:nil];
         return item;
     };

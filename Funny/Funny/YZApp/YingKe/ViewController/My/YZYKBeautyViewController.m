@@ -9,7 +9,7 @@
 #import "YZYKBeautyViewController.h"
 #import "YZYKLiveAddress.h"
 #import "YZMediaTool.h"
-#import "LFLiveKit.h"
+#import <YZLFLiveKit/YZLFLiveKit.h>
 
 @interface YZYKBeautyViewController ()
 @property (nonatomic, strong) LFLiveSession *session;
@@ -36,11 +36,18 @@
     
     _session = [[LFLiveSession alloc] initWithAudioConfiguration:[LFLiveAudioConfiguration defaultConfiguration]  videoConfiguration:[LFLiveVideoConfiguration defaultConfigurationForQuality:[YZYKLiveAddress getVideoQuality]]];
     _session.showDebugInfo = NO;
-    _session.preView = self.view;
+//    _session.preView = self.view;
     _session.beautyLevel = [YZYKLiveAddress getBeautyLevel];
     _session.brightLevel = [YZYKLiveAddress getBrightLevel];
 #pragma mark - 可以自定义视频参数--YZMediaTool
+//    _session.running = YES;
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    _session.preView = self.view;
     _session.running = YES;
+    
 }
 
 - (void)saveAction{

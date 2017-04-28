@@ -35,7 +35,7 @@
     // Do any additional setup after loading the view.
     
     UIImage *menuItemImage = [UIImage imageNamedWithFunny:@"menu_bg"];
-    YZCircularMenuItem *(^menuItemBlock)(NSString *contentImageName) = ^(NSString *contentImageName){
+    YZCircularMenuItem *(^menuItemBlock)() = ^(NSString *contentImageName){
         UIImage *contentImage = [UIImage imageNamedWithFunny:contentImageName];
         return [[YZCircularMenuItem alloc] initWithImage:menuItemImage highlightedImage:nil ContentImage:contentImage highlightedContentImage:nil];
     };

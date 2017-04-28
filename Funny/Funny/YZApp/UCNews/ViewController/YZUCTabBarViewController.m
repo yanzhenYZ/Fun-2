@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    UINavigationController *(^nvcBlock)(YZNVCModel *model) = ^(YZNVCModel *model){
+    UINavigationController *(^nvcBlock)() = ^(YZNVCModel *model){
         YZUCViewController *vc = [[NSClassFromString(model.vcName) alloc] init];
         vc.UCNewsHeadURL   = model.strings[0];
         vc.UCNewsMiddleURL = model.strings[1];

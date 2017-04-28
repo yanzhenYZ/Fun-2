@@ -10,8 +10,8 @@
 #import "YZYKPreView.h"
 #import "YZMediaTool.h"
 #import "YZYKLiveAddress.h"
-#import "LFLiveKit.h"
 #import "YZYingKeMacro.h"
+#import <YZLFLiveKit/YZLFLiveKit.h>
 
 @interface YZYKLiveViewController ()<LFLiveSessionDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *stateLabel;
