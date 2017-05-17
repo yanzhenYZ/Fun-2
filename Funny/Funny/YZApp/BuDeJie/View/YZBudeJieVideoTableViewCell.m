@@ -42,10 +42,8 @@
     [self.userView headViewWithheadImageUrlString:model.profile_image name:model.name timeString:model.create_time];
     self.contentLabel.text = model.text;
     self.contentLabel.frame = videoFrame.contentLabelFrame;
-    self.mainImageView.frame = videoFrame.mainIVFrame;
+    self.videoViewFrame = videoFrame.mainIVFrame;
     [self.mainImageView yz_setImageWithURL:model.bimageuri];
-    self.playBtn.frame = videoFrame.playBtnFrame;
-    self.progressView.frame = videoFrame.progressViewFrame;
     self.backView.frame = videoFrame.backViewFrame;
 }
 

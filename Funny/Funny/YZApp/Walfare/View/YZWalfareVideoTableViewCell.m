@@ -38,9 +38,7 @@
     self.shareURL   = videoFrame.videoModel.vplay_url;
     self.shareTitle = videoFrame.videoModel.wbody;
     self.contentLabel.frame  = videoFrame.contentLabelFrame;
-    self.mainImageView.frame = videoFrame.mainIVFrame;
-    self.playBtn.frame       = videoFrame.playBtnFrame;
-    self.progressView.frame  = videoFrame.progressViewFrame;
+    self.videoViewFrame      = videoFrame.mainIVFrame;
     self.backView.frame      = videoFrame.backViewFrame;
     
     self.creatTimeLabel.text = [NSString dateWithTimeInterval:videoFrame.videoModel.update_time.longLongValue];

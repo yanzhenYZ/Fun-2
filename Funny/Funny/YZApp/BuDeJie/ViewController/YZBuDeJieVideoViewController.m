@@ -9,10 +9,8 @@
 #import "YZBuDeJieVideoViewController.h"
 #import "YZBudeJieVideoTableViewCell.h"
 #import "YZBuDeJieVideoFrame.h"
-#import "FunnyVideoPlayManage.h"
-#import "WindowViewManager.h"
 
-@interface YZBuDeJieVideoViewController ()<VideoPlayDelegate>
+@interface YZBuDeJieVideoViewController ()
 
 @end
 
@@ -57,7 +55,6 @@
     YZBudeJieVideoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"YZBudeJieVideoTableViewCell"];
     if (!cell) {
         cell = [[YZBudeJieVideoTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"YZBudeJieVideoTableViewCell"];
-        cell.delegate = self;
     }
     [cell configure:self.dataSource[indexPath.row]];
     return cell;
@@ -74,24 +71,4 @@
     YZBudeJieWebViewController *wvc = [[YZBudeJieWebViewController alloc] initWithUrlString:frame.videoModel.weixin_url];
     [self.navigationController pushViewController:wvc animated:YES];
 }
-
-#pragma mark - VideoPlayDelegate
--(void)videoPlay:(BOOL)play videoCell:(YZVideoTableViewCell *)videoCell{
-    NSIndexPath *indexPath = [self.tableView indexPathForCell:videoCell];
-    YZBuDeJieVideoFrame *frame = self.dataSource[indexPath.row];
-    if ([WindowViewManager shareWindowViewManager].isWindowViewShow) {
-        videoCell.playBtn.selected = NO;
-        [[WindowViewManager shareWindowViewManager] videoPlayWithVideoUrlString:frame.videoModel.videouri];
-    }else{
-        [[FunnyVideoPlayManage shareVideoManage] playVideoWithCell:videoCell urlString:frame.videoModel.videouri play:play];
-    }
-}
-
--(void)playVideoOnWindow:(YZVideoTableViewCell *)cell{
-    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
-    YZBuDeJieVideoFrame *frame = self.dataSource[indexPath.row];
-    [[FunnyVideoPlayManage shareVideoManage] tableViewReload];
-    [[WindowViewManager shareWindowViewManager] videoPlayCurrentTime:[FunnyVideoPlayManage shareVideoManage].currentTime videoUrlString:frame.videoModel.videouri];
-}
-
 @end

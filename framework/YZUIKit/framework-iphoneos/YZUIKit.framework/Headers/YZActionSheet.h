@@ -10,6 +10,9 @@
 @class YZActionSheet;
 @interface YZActionSheetItem : NSObject
 
+- (instancetype)init UNAVAILABLE_ATTRIBUTE;
++ (instancetype)new UNAVAILABLE_ATTRIBUTE;
+
 /**
  * @brief 创建YZActionSheetItem
  *
@@ -32,6 +35,10 @@
 #pragma mark - YZActionSheet
 
 @interface YZActionSheet : UIView
+
+- (instancetype)init UNAVAILABLE_ATTRIBUTE;
++ (instancetype)new UNAVAILABLE_ATTRIBUTE;
+
 /**
  * @brief 创建YZActionSheet
  *

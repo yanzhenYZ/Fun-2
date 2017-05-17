@@ -1,0 +1,6 @@
+framework module YZPlayer {
+  umbrella header "YZPlayer.h"
+
+  export *
+  module * { export * }
+}

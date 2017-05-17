@@ -55,6 +55,7 @@
 
 #pragma mark - UIImage
 @interface UIImage (General)
++ (UIImage *)snapshotScreenInView:(UIView *)contentView;
 + (instancetype)imageWithCaptureView:(UIView *)view;
 + (UIImage *)imageNamedWithTabBar:(NSString *)name;
 + (UIImage *)imageNamedWithFunny:(NSString *)name;

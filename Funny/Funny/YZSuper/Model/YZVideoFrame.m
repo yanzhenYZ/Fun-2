@@ -10,11 +10,4 @@
 
 @implementation YZVideoFrame
 
--(CGRect)playBtnFrame{
-    return CGRectMake(CGRectGetMaxX(_mainIVFrame) - 70, CGRectGetMaxY(_mainIVFrame) - 62, 70, 62);
-}
-
--(CGRect)progressViewFrame{
-    return CGRectMake(_mainIVFrame.origin.x, CGRectGetMaxY(_mainIVFrame), _mainIVFrame.size.width, 2);
-}
 @end

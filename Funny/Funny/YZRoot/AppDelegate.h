@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <YZPlayer/YZPlayer.h>
 
 #define SharedAppDelegate (AppDelegate*)([UIApplication sharedApplication].delegate)
 
@@ -14,7 +15,7 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-@property (strong, nonatomic) VideoWindow *videoWindow;
+@property (strong, nonatomic) YZAVWindow *avWindow;
 
 @end
 

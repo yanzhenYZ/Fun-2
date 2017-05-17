@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "YZRootViewController.h"
-#import "VideoWindow.h"
 #import "MBProgressHUD+YZZ.h"
 #import "AFNetworking.h"
 #import "WXApi.h"
@@ -45,7 +44,6 @@ void FunnyUncaughtExceptionHandler(NSException *exception){
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [self monitoringNetwork];
-    [self configVideoWindow];
     [self config3DTouch];
     UINavigationBar *navigationBar = [UINavigationBar appearance];
     [navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:FunnyColor}];
@@ -67,11 +65,21 @@ void FunnyUncaughtExceptionHandler(NSException *exception){
     [UIApplication sharedApplication].shortcutItems = items;
 }
 
-- (void)configVideoWindow{
-    //初始化该window之后，不要使用[[UIApplication sharedApplication] windows].lastObject
-    self.videoWindow = [[VideoWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.videoWindow.backgroundColor = [UIColor clearColor];
-    self.videoWindow.windowLevel = UIWindowLevelAlert + 1;
+-(YZAVWindow *)avWindow
+{
+    if (!_avWindow) {
+        _avWindow = [[YZAVWindow alloc] initWithFrame:CGRectMake(0, 0, WIDTH, 240)];
+        YZAVMark *mark = [[YZAVMark alloc] init];
+        mark.mark = @"Y&Z TV";
+        mark.rect = CGRectMake(5, 0, 120, 40);
+        mark.attrs = @{
+                       NSForegroundColorAttributeName: YZColor(255, 155, 23),
+                       NSFontAttributeName: [UIFont fontWithName:@"IowanOldStyle-BoldItalic" size:17]
+                       };
+        [_avWindow mark:mark];
+        [_avWindow setPauseBtnImageName:@"WindowViewPause" closeBtnImageName:@"closeWindowView"];
+    }
+    return _avWindow;
 }
 
 - (void)monitoringNetwork{

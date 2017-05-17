@@ -24,6 +24,8 @@
 @property (nonatomic) CGPoint farPoint;
 @property (nonatomic, weak) id<YZCircularMenuItemDelegate> delegate;
 
+- (instancetype)init UNAVAILABLE_ATTRIBUTE;
++ (instancetype)new UNAVAILABLE_ATTRIBUTE;
 
 /**
  * @brief 创建YZCircularMenuItem对象
@@ -71,6 +73,9 @@
 /**        当前Items是否展开                         */
 @property (nonatomic, assign) BOOL expanded;
 //rotateAngle
+
+- (instancetype)init UNAVAILABLE_ATTRIBUTE;
++ (instancetype)new UNAVAILABLE_ATTRIBUTE;
 
 /**
  * @brief 创建YZCircularMenu对象

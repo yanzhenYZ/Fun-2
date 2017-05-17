@@ -7,6 +7,10 @@
 #import <UIKit/UIKit.h>
 
 @interface YZHorizontalLayout : UICollectionViewFlowLayout
+
+- (instancetype)init UNAVAILABLE_ATTRIBUTE;
++ (instancetype)new UNAVAILABLE_ATTRIBUTE;
+
 /**
  * @brief 创建一个流水布局
  *

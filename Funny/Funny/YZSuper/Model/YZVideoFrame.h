@@ -10,6 +10,4 @@
 
 @interface YZVideoFrame : YZSuperFrame
 @property (nonatomic, assign) CGRect mainIVFrame;
-@property (nonatomic, assign, readonly) CGRect playBtnFrame;
-@property (nonatomic, assign, readonly) CGRect progressViewFrame;
 @end

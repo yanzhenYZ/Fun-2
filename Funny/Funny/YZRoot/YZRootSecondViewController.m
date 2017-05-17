@@ -19,8 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    NSArray *titles = @[@"画图",@"记事本",@"二维码"];
-    NSArray *images = @[@"drawPicture",@"note",@"QR"];
+    NSArray *titles = @[@"画图",@"记事本",@"二维码",@"自拍"];
+    NSArray *images = @[@"drawPicture",@"note",@"QR",@"meipai"];
     [images enumerateObjectsUsingBlock:^(NSString *imageName, NSUInteger idx, BOOL * _Nonnull stop) {
         NSInteger row = idx % 4;
         NSInteger col = idx / 4;

@@ -9,10 +9,8 @@
 #import "YZWalfareVideoViewController.h"
 #import "YZWalfareVideoTableViewCell.h"
 #import "YZWalfareVideoFrame.h"
-#import "FunnyVideoPlayManage.h"
-#import "WindowViewManager.h"
 
-@interface YZWalfareVideoViewController ()<VideoPlayDelegate>
+@interface YZWalfareVideoViewController ()
 
 @end
 
@@ -47,7 +45,6 @@
     YZWalfareVideoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"YZWalfareVideoTableViewCell"];
     if (!cell) {
         cell = [[YZWalfareVideoTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"YZWalfareVideoTableViewCell"];
-        cell.delegate = self;
     }
     [cell configure:self.dataSource[indexPath.row]];
     return cell;
@@ -56,24 +53,5 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     YZWalfareVideoFrame *frame = self.dataSource[indexPath.row];
     return frame.rowHeight;
-}
-
-#pragma mark - VideoPlayDelegate
--(void)videoPlay:(BOOL)play videoCell:(YZVideoTableViewCell *)videoCell{
-    NSIndexPath *indexPath = [self.tableView indexPathForCell:videoCell];
-    YZWalfareVideoFrame *frame = self.dataSource[indexPath.row];
-    if ([WindowViewManager shareWindowViewManager].isWindowViewShow) {
-        videoCell.playBtn.selected = NO;
-        [[WindowViewManager shareWindowViewManager] videoPlayWithVideoUrlString:frame.videoModel.vplay_url];
-    }else{
-        [[FunnyVideoPlayManage shareVideoManage] playVideoWithCell:videoCell urlString:frame.videoModel.vplay_url play:play];
-    }
-}
-
--(void)playVideoOnWindow:(YZVideoTableViewCell *)cell{
-    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
-    YZWalfareVideoFrame *frame = self.dataSource[indexPath.row];
-    [[FunnyVideoPlayManage shareVideoManage] tableViewReload];
-    [[WindowViewManager shareWindowViewManager] videoPlayCurrentTime:[FunnyVideoPlayManage shareVideoManage].currentTime videoUrlString:frame.videoModel.vplay_url];
 }
 @end

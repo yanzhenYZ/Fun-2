@@ -66,8 +66,9 @@
     [self.shotPartView removeFromSuperview];
     self.shotPartView = nil;
     if (shot) {
-        UIImage *image = [UIImage imageWithCaptureView:self.view];
-        [self saveImage:image frame:rect];
+        UIImage *image = [UIImage snapshotScreenInView:self.view];
+        [[GlobalManager shareManager] saveImage:image];
+//        [self saveImage:image frame:rect];
     }
 }
 

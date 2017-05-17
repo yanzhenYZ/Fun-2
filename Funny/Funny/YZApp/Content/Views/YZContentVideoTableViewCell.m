@@ -49,9 +49,7 @@
     
     self.userView.frame = CGRectMake(CONTENTSPACE * 2, CONTENTSPACE, WIDTH - 4 * CONTENTSPACE, USERVIEWHEIGHT);
     self.contentLabel.frame = videoFrame.contentLabelFrame;
-    self.mainImageView.frame = videoFrame.mainIVFrame;
-    self.playBtn.frame = videoFrame.playBtnFrame;
-    self.progressView.frame = videoFrame.progressViewFrame;
+    self.videoViewFrame = videoFrame.mainIVFrame;
     self.commentView.frame = videoFrame.commentViewFrame;
     if (videoFrame.contentModel.comments.count > 0) {
         YZContentUser *user = videoFrame.contentModel.comments[0];

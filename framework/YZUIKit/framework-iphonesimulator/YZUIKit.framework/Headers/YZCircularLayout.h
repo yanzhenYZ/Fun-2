@@ -8,6 +8,9 @@
 
 @interface YZCircularLayout : UICollectionViewLayout
 
+- (instancetype)init UNAVAILABLE_ATTRIBUTE;
++ (instancetype)new UNAVAILABLE_ATTRIBUTE;
+
 /**
  * @brief 环形布局(just for one section)
  *

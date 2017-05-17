@@ -8,7 +8,6 @@
 
 #import "YZYKHotTableViewCell.h"
 #import "YZYingKeModel.h"
-#import "YZSLiveModel.h"
 #import "YZYingKeMacro.h"
 
 @interface YZYKHotTableViewCell ()
@@ -33,15 +32,6 @@
     _nickLabel.text = model.creator.nick;
     _addressLabel.text = model.city.length > 0 ? model.city : @"难道在火星";
     _onLineLabel.text = [NSString stringWithFormat:@"%ld",model.online_users];
-}
-
-- (void)configureSLive:(YZSLiveModel *)model
-{
-    [_mainIV yz_setImageWithURL:model.imageURLStr placeholderImage:@"live_default"];
-    [_headIV yz_setImageWithURL:model.imageURLStr placeholderImage:@"default_head"];
-    _nickLabel.text = model.name;
-    _addressLabel.text = model.region > 0 ? model.region : @"难道在火星";
-    _onLineLabel.text = [NSString stringWithFormat:@"%d",model.watch_count];
 }
 
 - (void)awakeFromNib {

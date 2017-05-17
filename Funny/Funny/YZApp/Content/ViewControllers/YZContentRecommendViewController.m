@@ -9,10 +9,8 @@
 #import "YZContentRecommendViewController.h"
 #import "YZContentVideoTableViewCell.h"
 #import "YZContentVideoFrame.h"
-#import "FunnyVideoPlayManage.h"
-#import "WindowViewManager.h"
 
-@interface YZContentRecommendViewController ()<VideoPlayDelegate>
+@interface YZContentRecommendViewController ()
 
 @end
 
@@ -68,7 +66,6 @@
     YZContentVideoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"YZContentVideoTableViewCell"];
     if (!cell) {
         cell = [[YZContentVideoTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"YZContentVideoTableViewCell"];
-        cell.delegate = self;
     }
     [cell configure:self.dataSource[indexPath.row]];
     return cell;
@@ -84,26 +81,4 @@
     YZContentWebViewController *wvc = [[YZContentWebViewController alloc] initWithUrlString:frame.contentModel.group.share_url];
     [self.navigationController pushViewController:wvc animated:YES];
 }
-#pragma mark - VideoPlayDelegate
--(void)videoPlay:(BOOL)play videoCell:(YZVideoTableViewCell *)videoCell{
-    NSIndexPath *indexPath = [self.tableView indexPathForCell:videoCell];
-    YZContentVideoFrame *frame = self.dataSource[indexPath.row];
-    //frame.contentModel.group.mp4_url
-    NSString *url = frame.contentModel.group.video_720p.url_list[0][@"url"];
-    if ([WindowViewManager shareWindowViewManager].isWindowViewShow) {
-        videoCell.playBtn.selected = NO;
-        [[WindowViewManager shareWindowViewManager] videoPlayWithVideoUrlString:url];
-    }else{
-        [[FunnyVideoPlayManage shareVideoManage] playVideoWithCell:videoCell urlString:url play:play];
-    }
-}
-
--(void)playVideoOnWindow:(YZVideoTableViewCell *)cell{
-    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
-    YZContentVideoFrame *frame = self.dataSource[indexPath.row];
-    NSString *url = frame.contentModel.group.video_720p.url_list[0][@"url"];
-    [[FunnyVideoPlayManage shareVideoManage] tableViewReload];
-    [[WindowViewManager shareWindowViewManager] videoPlayCurrentTime:[FunnyVideoPlayManage shareVideoManage].currentTime videoUrlString:url];
-}
-
 @end

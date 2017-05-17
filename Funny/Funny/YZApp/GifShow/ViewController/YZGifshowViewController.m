@@ -10,10 +10,8 @@
 #import "YZGifshowTableViewCell.h"
 #import "YZGifshowModel.h"
 #import "GifShowMacro.h"
-#import "FunnyVideoPlayManage.h"
-#import "WindowViewManager.h"
 
-@interface YZGifshowViewController ()<VideoPlayDelegate>
+@interface YZGifshowViewController ()
 
 @end
 
@@ -82,29 +80,9 @@
     YZGifshowTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"YZGifshowTableViewCell"];
     if (!cell) {
         cell = [[YZGifshowTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"YZGifshowTableViewCell"];
-        cell.delegate = self;
     }
     [cell configure:self.dataSource[indexPath.row]];
     return cell;
-}
-
-#pragma mark - VideoPlayDelegate
--(void)videoPlay:(BOOL)play videoCell:(YZVideoTableViewCell *)videoCell{
-    NSIndexPath *indexPath = [self.tableView indexPathForCell:videoCell];
-    YZGifshowModel *model = self.dataSource[indexPath.row];
-    if ([WindowViewManager shareWindowViewManager].isWindowViewShow) {
-        videoCell.playBtn.selected = NO;
-        [[WindowViewManager shareWindowViewManager] videoPlayWithVideoUrlString:model.main_mv_url];
-    }else{
-        [[FunnyVideoPlayManage shareVideoManage] playVideoWithCell:videoCell urlString:model.main_mv_url play:play];
-    }
-}
-
--(void)playVideoOnWindow:(YZVideoTableViewCell *)cell{
-    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
-    YZGifshowModel *model = self.dataSource[indexPath.row];
-    [[FunnyVideoPlayManage shareVideoManage] tableViewReload];
-    [[WindowViewManager shareWindowViewManager] videoPlayCurrentTime:[FunnyVideoPlayManage shareVideoManage].currentTime videoUrlString:model.main_mv_url];
 }
 
 @end

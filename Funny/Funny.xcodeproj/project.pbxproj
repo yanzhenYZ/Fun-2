@@ -46,12 +46,6 @@
 		9B59B5A81DEE6A44001D2F70 /* YZWalfarePictureTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B59B5A71DEE6A44001D2F70 /* YZWalfarePictureTableViewCell.m */; };
 		9B59B5AE1DEE79E2001D2F70 /* YZCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B59B5AB1DEE79E2001D2F70 /* YZCommentView.m */; };
 		9B59B5AF1DEE79E2001D2F70 /* YZUserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B59B5AD1DEE79E2001D2F70 /* YZUserView.m */; };
-		9B59B5B21DEE7BC8001D2F70 /* FunnyVideoPlayManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B59B5B11DEE7BC8001D2F70 /* FunnyVideoPlayManage.m */; };
-		9B59B5B51DEE7C32001D2F70 /* YZLayerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B59B5B41DEE7C32001D2F70 /* YZLayerDelegate.m */; };
-		9B59B5BF1DEE7CDE001D2F70 /* VideoWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B59B5B81DEE7CDE001D2F70 /* VideoWindow.m */; };
-		9B59B5C01DEE7CDE001D2F70 /* WindowLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B59B5BA1DEE7CDE001D2F70 /* WindowLoadingView.m */; };
-		9B59B5C11DEE7CDE001D2F70 /* WindowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B59B5BC1DEE7CDE001D2F70 /* WindowView.m */; };
-		9B59B5C21DEE7CDE001D2F70 /* WindowViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B59B5BE1DEE7CDE001D2F70 /* WindowViewManager.m */; };
 		9B59B5C61DEE9C8B001D2F70 /* YZSuperWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B59B5C41DEE9C8B001D2F70 /* YZSuperWebViewController.m */; };
 		9B59B5C71DEE9C8B001D2F70 /* YZSuperWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B59B5C51DEE9C8B001D2F70 /* YZSuperWebViewController.xib */; };
 		9B59B5CD1DEE9F65001D2F70 /* YZContentWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B59B5CC1DEE9F65001D2F70 /* YZContentWebViewController.m */; };
@@ -139,8 +133,8 @@
 		9B5F13091E00F12100C9CE69 /* YZYKDeclarationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B5F13071E00F12100C9CE69 /* YZYKDeclarationViewController.xib */; };
 		9B5F130D1E00F14300C9CE69 /* YZYKBeautyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B5F130B1E00F14300C9CE69 /* YZYKBeautyViewController.m */; };
 		9B5F130E1E00F14300C9CE69 /* YZYKBeautyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B5F130C1E00F14300C9CE69 /* YZYKBeautyViewController.xib */; };
-		9B67AE831E9C865500CE4B48 /* YZSLiveHotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B67AE821E9C865500CE4B48 /* YZSLiveHotViewController.m */; };
-		9B67AE861E9C891E00CE4B48 /* YZSLiveModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B67AE851E9C891E00CE4B48 /* YZSLiveModel.m */; };
+		9B7246F11EC160A50070FE88 /* YZMPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7246F01EC160A50070FE88 /* YZMPViewController.m */; };
+		9B7246F41EC167B40070FE88 /* YZMPSettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7246F31EC167B40070FE88 /* YZMPSettingView.m */; };
 		9BD24DD81E091155001ED9DF /* YZClipImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD24DD71E091155001ED9DF /* YZClipImageViewController.m */; };
 		9BD24DDB1E0911DC001ED9DF /* YZClipImageMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD24DDA1E0911DC001ED9DF /* YZClipImageMaskView.m */; };
 		9BDDDF851DE6F08A001BD7BC /* YZRootFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDDDF841DE6F08A001BD7BC /* YZRootFirstViewController.m */; };
@@ -343,18 +337,6 @@
 		9B59B5AB1DEE79E2001D2F70 /* YZCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZCommentView.m; sourceTree = "<group>"; };
 		9B59B5AC1DEE79E2001D2F70 /* YZUserView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZUserView.h; sourceTree = "<group>"; };
 		9B59B5AD1DEE79E2001D2F70 /* YZUserView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZUserView.m; sourceTree = "<group>"; };
-		9B59B5B01DEE7BC8001D2F70 /* FunnyVideoPlayManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunnyVideoPlayManage.h; sourceTree = "<group>"; };
-		9B59B5B11DEE7BC8001D2F70 /* FunnyVideoPlayManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunnyVideoPlayManage.m; sourceTree = "<group>"; };
-		9B59B5B31DEE7C32001D2F70 /* YZLayerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZLayerDelegate.h; sourceTree = "<group>"; };
-		9B59B5B41DEE7C32001D2F70 /* YZLayerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZLayerDelegate.m; sourceTree = "<group>"; };
-		9B59B5B71DEE7CDE001D2F70 /* VideoWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoWindow.h; sourceTree = "<group>"; };
-		9B59B5B81DEE7CDE001D2F70 /* VideoWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoWindow.m; sourceTree = "<group>"; };
-		9B59B5B91DEE7CDE001D2F70 /* WindowLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindowLoadingView.h; sourceTree = "<group>"; };
-		9B59B5BA1DEE7CDE001D2F70 /* WindowLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindowLoadingView.m; sourceTree = "<group>"; };
-		9B59B5BB1DEE7CDE001D2F70 /* WindowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindowView.h; sourceTree = "<group>"; };
-		9B59B5BC1DEE7CDE001D2F70 /* WindowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindowView.m; sourceTree = "<group>"; };
-		9B59B5BD1DEE7CDE001D2F70 /* WindowViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindowViewManager.h; sourceTree = "<group>"; };
-		9B59B5BE1DEE7CDE001D2F70 /* WindowViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindowViewManager.m; sourceTree = "<group>"; };
 		9B59B5C31DEE9C8B001D2F70 /* YZSuperWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZSuperWebViewController.h; sourceTree = "<group>"; };
 		9B59B5C41DEE9C8B001D2F70 /* YZSuperWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZSuperWebViewController.m; sourceTree = "<group>"; };
 		9B59B5C51DEE9C8B001D2F70 /* YZSuperWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YZSuperWebViewController.xib; sourceTree = "<group>"; };
@@ -509,10 +491,10 @@
 		9B5F130A1E00F14300C9CE69 /* YZYKBeautyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZYKBeautyViewController.h; sourceTree = "<group>"; };
 		9B5F130B1E00F14300C9CE69 /* YZYKBeautyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZYKBeautyViewController.m; sourceTree = "<group>"; };
 		9B5F130C1E00F14300C9CE69 /* YZYKBeautyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YZYKBeautyViewController.xib; sourceTree = "<group>"; };
-		9B67AE811E9C865500CE4B48 /* YZSLiveHotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZSLiveHotViewController.h; sourceTree = "<group>"; };
-		9B67AE821E9C865500CE4B48 /* YZSLiveHotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZSLiveHotViewController.m; sourceTree = "<group>"; };
-		9B67AE841E9C891E00CE4B48 /* YZSLiveModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZSLiveModel.h; sourceTree = "<group>"; };
-		9B67AE851E9C891E00CE4B48 /* YZSLiveModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZSLiveModel.m; sourceTree = "<group>"; };
+		9B7246EF1EC160A50070FE88 /* YZMPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZMPViewController.h; sourceTree = "<group>"; };
+		9B7246F01EC160A50070FE88 /* YZMPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZMPViewController.m; sourceTree = "<group>"; };
+		9B7246F21EC167B40070FE88 /* YZMPSettingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZMPSettingView.h; sourceTree = "<group>"; };
+		9B7246F31EC167B40070FE88 /* YZMPSettingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZMPSettingView.m; sourceTree = "<group>"; };
 		9BD24DD61E091155001ED9DF /* YZClipImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZClipImageViewController.h; sourceTree = "<group>"; };
 		9BD24DD71E091155001ED9DF /* YZClipImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZClipImageViewController.m; sourceTree = "<group>"; };
 		9BD24DD91E0911DC001ED9DF /* YZClipImageMaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZClipImageMaskView.h; sourceTree = "<group>"; };
@@ -919,21 +901,6 @@
 			path = UserView;
 			sourceTree = "<group>";
 		};
-		9B59B5B61DEE7CDE001D2F70 /* VideoWindow */ = {
-			isa = PBXGroup;
-			children = (
-				9B59B5B71DEE7CDE001D2F70 /* VideoWindow.h */,
-				9B59B5B81DEE7CDE001D2F70 /* VideoWindow.m */,
-				9B59B5B91DEE7CDE001D2F70 /* WindowLoadingView.h */,
-				9B59B5BA1DEE7CDE001D2F70 /* WindowLoadingView.m */,
-				9B59B5BB1DEE7CDE001D2F70 /* WindowView.h */,
-				9B59B5BC1DEE7CDE001D2F70 /* WindowView.m */,
-				9B59B5BD1DEE7CDE001D2F70 /* WindowViewManager.h */,
-				9B59B5BE1DEE7CDE001D2F70 /* WindowViewManager.m */,
-			);
-			path = VideoWindow;
-			sourceTree = "<group>";
-		};
 		9B59B5D01DEEB3EA001D2F70 /* WeChatSDK1.7.5 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1311,31 +1278,15 @@
 			path = My;
 			sourceTree = "<group>";
 		};
-		9B67AE7E1E9C863300CE4B48 /* SLive */ = {
+		9B7246EE1EC160500070FE88 /* Meipai */ = {
 			isa = PBXGroup;
 			children = (
-				9B67AE7F1E9C863300CE4B48 /* Model */,
-				9B67AE801E9C863300CE4B48 /* ViewController */,
+				9B7246EF1EC160A50070FE88 /* YZMPViewController.h */,
+				9B7246F01EC160A50070FE88 /* YZMPViewController.m */,
+				9B7246F21EC167B40070FE88 /* YZMPSettingView.h */,
+				9B7246F31EC167B40070FE88 /* YZMPSettingView.m */,
 			);
-			path = SLive;
-			sourceTree = "<group>";
-		};
-		9B67AE7F1E9C863300CE4B48 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				9B67AE841E9C891E00CE4B48 /* YZSLiveModel.h */,
-				9B67AE851E9C891E00CE4B48 /* YZSLiveModel.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		9B67AE801E9C863300CE4B48 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				9B67AE811E9C865500CE4B48 /* YZSLiveHotViewController.h */,
-				9B67AE821E9C865500CE4B48 /* YZSLiveHotViewController.m */,
-			);
-			path = ViewController;
+			path = Meipai;
 			sourceTree = "<group>";
 		};
 		9BD24DD51E09113E001ED9DF /* YZClipImageLib */ = {
@@ -1354,7 +1305,6 @@
 			children = (
 				9B5F02C01DF7AFF400C9CE69 /* GlobalView */,
 				9B59B6601DF4FC69001D2F70 /* LockedView */,
-				9B59B5B61DEE7CDE001D2F70 /* VideoWindow */,
 				9B59B5A91DEE79E2001D2F70 /* UserView */,
 				9BDDDF8A1DE7CEB7001BD7BC /* YZRootView */,
 			);
@@ -1376,8 +1326,6 @@
 			isa = PBXGroup;
 			children = (
 				9BDDDF981DE7DF1B001BD7BC /* YZGeneralEnum.h */,
-				9B59B5B01DEE7BC8001D2F70 /* FunnyVideoPlayManage.h */,
-				9B59B5B11DEE7BC8001D2F70 /* FunnyVideoPlayManage.m */,
 				9BDDDF941DE7D209001BD7BC /* GlobalMacro.h */,
 				9BDDDF951DE7D209001BD7BC /* GlobalMacro.m */,
 				9BDDDF911DE7D093001BD7BC /* NSObject+General.h */,
@@ -1385,8 +1333,6 @@
 				9BDDDF961DE7D209001BD7BC /* YZShareInstance.h */,
 				9BDDE1061DE82D6A001BD7BC /* GlobalManager.h */,
 				9BDDE1071DE82D6A001BD7BC /* GlobalManager.m */,
-				9B59B5B31DEE7C32001D2F70 /* YZLayerDelegate.h */,
-				9B59B5B41DEE7C32001D2F70 /* YZLayerDelegate.m */,
 			);
 			path = YZGlobal;
 			sourceTree = "<group>";
@@ -1410,7 +1356,7 @@
 		9BDDDF991DE7E7C8001BD7BC /* YZApp */ = {
 			isa = PBXGroup;
 			children = (
-				9B67AE7E1E9C863300CE4B48 /* SLive */,
+				9B7246EE1EC160500070FE88 /* Meipai */,
 				9B5F12951DFFD17B00C9CE69 /* YingKe */,
 				9B59B6271DF01520001D2F70 /* DrawPicture */,
 				9B59B6051DEFC3CE001D2F70 /* NetEase */,
@@ -2052,7 +1998,6 @@
 				9B05BEEA1DF65B4A00BEAF96 /* YZNoteCreateViewController.m in Sources */,
 				9BECC8951DED88E0008384D8 /* YZWalfareGirlViewController.m in Sources */,
 				9B59B5FC1DEECC60001D2F70 /* YZUCPictureTableViewCell.m in Sources */,
-				9B67AE861E9C891E00CE4B48 /* YZSLiveModel.m in Sources */,
 				9BECC8791DED6E5C008384D8 /* YZBuDeJieTextFrame.m in Sources */,
 				9BECC86A1DED6812008384D8 /* YZBuDeJieVideoViewController.m in Sources */,
 				9B59B6541DF10348001D2F70 /* YZQRMakeViewController.m in Sources */,
@@ -2117,6 +2062,7 @@
 				9B59B6581DF13D53001D2F70 /* YZBudeJieWebViewController.m in Sources */,
 				9B5F12F71DFFE9D600C9CE69 /* YZYKMyLiveAddressViewController.m in Sources */,
 				9BECC88C1DED886C008384D8 /* YZWalfareViewController.m in Sources */,
+				9B7246F41EC167B40070FE88 /* YZMPSettingView.m in Sources */,
 				9BDDE07E1DE7EEEF001BD7BC /* UIImage+WebP.m in Sources */,
 				9B59B5AE1DEE79E2001D2F70 /* YZCommentView.m in Sources */,
 				9BECC8981DED8914008384D8 /* WalfareMacro.m in Sources */,
@@ -2140,9 +2086,7 @@
 				9BDDE0C61DE821B1001BD7BC /* NSObject+MJProperty.m in Sources */,
 				9B59B6321DF015E2001D2F70 /* YZDPBezierPath.m in Sources */,
 				9B05BE801DF5407800BEAF96 /* YZNoteViewController.m in Sources */,
-				9B67AE831E9C865500CE4B48 /* YZSLiveHotViewController.m in Sources */,
 				9B59B6111DEFCAB9001D2F70 /* NetEaseMacro.m in Sources */,
-				9B59B5C21DEE7CDE001D2F70 /* WindowViewManager.m in Sources */,
 				9BDDE0931DE8196C001BD7BC /* YZSuperThirdViewController.m in Sources */,
 				9BECC84F1DED1D40008384D8 /* YZWhatSomeFrame.m in Sources */,
 				9BECC84C1DED1B64008384D8 /* YZWhatSomeGroup.m in Sources */,
@@ -2159,9 +2103,9 @@
 				9BECC8401DED16BE008384D8 /* YZGifshowTabBarViewController.m in Sources */,
 				9BDDE1251DEBC8C5001BD7BC /* MJExtensionConfig.m in Sources */,
 				9B5F12EC1DFFE91300C9CE69 /* YZYKMyTableViewController.m in Sources */,
-				9B59B5B21DEE7BC8001D2F70 /* FunnyVideoPlayManage.m in Sources */,
 				9B05BF131DF6C07B00BEAF96 /* YZAboutVersionViewController.m in Sources */,
 				9BDDE07F1DE7EEEF001BD7BC /* UIImageView+HighlightedWebCache.m in Sources */,
+				9B7246F11EC160A50070FE88 /* YZMPViewController.m in Sources */,
 				9BECC8581DED2D2D008384D8 /* YZGifshowModel.m in Sources */,
 				9B59B59C1DEE687F001D2F70 /* YZWalfareTextFrame.m in Sources */,
 				9B59B61D1DEFD627001D2F70 /* YZNEPicturesTableViewCell.m in Sources */,
@@ -2183,7 +2127,6 @@
 				9BD24DDB1E0911DC001ED9DF /* YZClipImageMaskView.m in Sources */,
 				9BDDE0051DE7EBAA001BD7BC /* YZRefreshExtend.m in Sources */,
 				9BDDE0811DE7EEEF001BD7BC /* UIView+WebCache.m in Sources */,
-				9B59B5B51DEE7C32001D2F70 /* YZLayerDelegate.m in Sources */,
 				9BDDE13E1DEBFCB7001BD7BC /* YZContentViewController.m in Sources */,
 				9BDDDF971DE7D209001BD7BC /* GlobalMacro.m in Sources */,
 				9B5F130D1E00F14300C9CE69 /* YZYKBeautyViewController.m in Sources */,
@@ -2193,12 +2136,10 @@
 				9BECC8701DED68A6008384D8 /* BuDeJieMacro.m in Sources */,
 				9B59B65E1DF4F9CA001D2F70 /* YZNoteLockedViewController.m in Sources */,
 				9BDDE0701DE7EEEF001BD7BC /* MKAnnotationView+WebCache.m in Sources */,
-				9B59B5BF1DEE7CDE001D2F70 /* VideoWindow.m in Sources */,
 				9BDDE0851DE8050B001BD7BC /* YZSuperViewController.m in Sources */,
 				9B05BEE61DF6536000BEAF96 /* YZNoteModel.m in Sources */,
 				9BDDE0721DE7EEEF001BD7BC /* NSImage+WebCache.m in Sources */,
 				9BDDE0761DE7EEEF001BD7BC /* SDWebImageDecoder.m in Sources */,
-				9B59B5C01DEE7CDE001D2F70 /* WindowLoadingView.m in Sources */,
 				9B5F12CC1DFFD17B00C9CE69 /* YZYKPreView.m in Sources */,
 				9B59B64A1DF1031A001D2F70 /* YZQRScanViewController.m in Sources */,
 				9B05BEE31DF6532E00BEAF96 /* YZDBManager.m in Sources */,
@@ -2216,7 +2157,6 @@
 				9BECC8551DED2121008384D8 /* YZWhatSomeTableViewCell.m in Sources */,
 				9BECC88F1DED88A2008384D8 /* YZWalfareTextViewController.m in Sources */,
 				9BDDDFEA1DE7EBAA001BD7BC /* AFSecurityPolicy.m in Sources */,
-				9B59B5C11DEE7CDE001D2F70 /* WindowView.m in Sources */,
 				9BDDE0C41DE821B1001BD7BC /* NSObject+MJCoding.m in Sources */,
 				9B05BF0E1DF6B7CF00BEAF96 /* YZAboutDeclartionViewController.m in Sources */,
 				9BDDE0C51DE821B1001BD7BC /* NSObject+MJKeyValue.m in Sources */,
@@ -2373,6 +2313,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/../framework/YZUIKit/framework$(EFFECTIVE_PLATFORM_NAME)",
 					"$(SRCROOT)/../framework/LFLiveKit/framework$(EFFECTIVE_PLATFORM_NAME)",
+					"$(SRCROOT)/../framework/YZPlayer/framework$(EFFECTIVE_PLATFORM_NAME)",
 					"$(PROJECT_DIR)/Funny/YZLib",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Funny/Funny-Prefix.pch";
@@ -2394,6 +2335,8 @@
 					YZUIKit,
 					"-framework",
 					YZLFLiveKit,
+					"-framework",
+					YZPlayer,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.v2tech.BCYZ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2412,6 +2355,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/../framework/YZUIKit/framework$(EFFECTIVE_PLATFORM_NAME)",
 					"$(SRCROOT)/../framework/LFLiveKit/framework$(EFFECTIVE_PLATFORM_NAME)",
+					"$(SRCROOT)/../framework/YZPlayer/framework$(EFFECTIVE_PLATFORM_NAME)",
 					"$(PROJECT_DIR)/Funny/YZLib",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Funny/Funny-Prefix.pch";
@@ -2429,6 +2373,8 @@
 					YZUIKit,
 					"-framework",
 					YZLFLiveKit,
+					"-framework",
+					YZPlayer,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.v2tech.BCYZ;
 				PRODUCT_NAME = "$(TARGET_NAME)";

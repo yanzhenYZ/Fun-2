@@ -25,18 +25,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    YZBlockSelf(self)
-    [YZMediaTool requestAccessForVideo:^(BOOL authorized) {
-        if (authorized) {
-            //不在主线程，必须回到主线程做UI的操作
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [blockself.view addSubview:blockself.faceView];
-                [blockself.view insertSubview:blockself.faceView atIndex:0];
-                [blockself.faceView startRunning];
-                blockself.scrollView.backgroundColor = [UIColor clearColor];
-            });
-        }
-    }];
+    self.view.backgroundColor = [UIColor grayColor];
+//    //和自拍都采用摄像头采集，产生冲突
+//    YZBlockSelf(self)
+//    [YZMediaTool requestAccessForVideo:^(BOOL authorized) {
+//        if (authorized) {
+//            //不在主线程，必须回到主线程做UI的操作
+//            dispatch_async(dispatch_get_main_queue(), ^{
+//                [blockself.view addSubview:blockself.faceView];
+//                [blockself.view insertSubview:blockself.faceView atIndex:0];
+//                [blockself.faceView startRunning];
+//                blockself.scrollView.backgroundColor = [UIColor clearColor];
+//            });
+//        }
+//    }];
     _firstVC = [[YZRootFirstViewController alloc] init];
     _secondVC = [[YZRootSecondViewController alloc] init];
     [self addChildViewController:_firstVC];

@@ -37,7 +37,8 @@
     // Do any additional setup after loading the view.
     
     [self.view layoutIfNeeded];
-#warning mark - scrollView手动加载不会出现--navigationBar--tabBar留下白色边框的问题--
+
+#pragma mark - scrollView手动加载不会出现--navigationBar--tabBar留下白色边框的问题--
     self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, HEIGHT)];
     self.scrollView.backgroundColor = [UIColor whiteColor];
     self.scrollView.delegate = self;

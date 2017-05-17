@@ -31,9 +31,7 @@
     [self.userView headViewWithheadImageUrlString:model.headurl name:model.user_name time:[model.time timeStringToLongLong]];
     [self.mainImageView yz_setImageWithURL:model.thumbnail_url];
     CGFloat mainHeight = (WIDTH - 100) / 3 * 4;
-    self.mainImageView.frame = CGRectMake(50, 70.0, WIDTH - 100.0, mainHeight);
-    self.progressView.frame = CGRectMake(self.mainImageView.x, self.mainImageView.maxY, WIDTH - 100, 2);
-    self.playBtn.frame = CGRectMake(self.mainImageView.maxX - 70, self.mainImageView.maxY - 62, 70, 62);
+    self.videoViewFrame = CGRectMake(50, 70.0, WIDTH - 100.0, mainHeight);
     self.backView.frame = CGRectMake(CONTENTSPACE, CONTENTSPACE, WIDTH - 2 * CONTENTSPACE, self.mainImageView.maxY + 7);
 }
 

@@ -64,7 +64,7 @@ typedef void(^ImageBlock)(UIImage *image);
     [_scrollView addSubview:_imageView];
     [_scrollView setZoomScale:1.01 animated:YES];
     
-#warning mark - imageView坐标必须以(0, 0)开始(保证拖动imageView可以回到scrollView边界内)
+#pragma mark - imageView坐标必须以(0, 0)开始(保证拖动imageView可以回到scrollView边界内)
     //调整imageView在scrollView的中心，只能通过设置--contentOffset
     _scrollView.contentOffset = CGPointMake((_imageView.width - _scrollView.width) * 0.5, (_imageView.height - _scrollView.height) * 0.5);
     _maskView = [[YZClipImageMaskView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, HEIGHT) clipFrame:_backView.frame];

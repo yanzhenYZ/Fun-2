@@ -20,7 +20,7 @@ typedef NS_ENUM(NSUInteger, YZAPPNAME) {
     YZAPPNAME_DRAWPICTURE = 1000,
     YZAPPNAME_NOTE,
     YZAPPNAME_QR,
-    YZAPPNAME_sLive
+    YZAPPNAME_Meipai
 };
 //YZYKTabBarViewController
 static NSString *YZApp[] = {
@@ -34,7 +34,7 @@ static NSString *YZApp[] = {
     [YZAPPNAME_DRAWPICTURE]  = @"YZDrawPictureViewController",
     [YZAPPNAME_NOTE]         = @"YZNoteLockedViewController",
     [YZAPPNAME_QR]           = @"YZQRViewController",
-    [YZAPPNAME_sLive]        = @"YZSLiveHotViewController",
+    [YZAPPNAME_Meipai]       = @"YZMPViewController",
 };
 
 //上拉，下拉

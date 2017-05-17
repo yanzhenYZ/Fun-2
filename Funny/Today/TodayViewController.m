@@ -79,9 +79,9 @@
 #pragma mark - UI
 - (void)configUI{
     
-    NSArray *titles = @[@"内涵段子",@"快手",@"直播",@"二维码"];
-    NSArray *images = @[@"content",@"gifShow",@"yingke",@"QR"];
-    NSArray <NSNumber *>*tags = @[@100,@101,@106,@1002];
+    NSArray *titles = @[@"快手",@"直播",@"二维码",@"自拍"];
+    NSArray *images = @[@"gifShow",@"yingke",@"QR",@"meipai"];
+    NSArray <NSNumber *>*tags = @[@101,@106,@1002,@1003];
     
     CGFloat space = 10.0;
 #pragma mark - 2

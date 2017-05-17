@@ -71,31 +71,31 @@
 }
 
 /**
- /*两个版本的框架的方法,发现参数稍微有点不一样*/
+ 两个版本的框架的方法,发现参数稍微有点不一样
 
 //    _session = [[LFLiveSession alloc]initWithAudioConfiguration:[LFLiveAudioConfiguration defaultConfiguration] videoConfiguration:[LFLiveVideoConfiguration defaultConfigurationForQuality:LFLiveVideoQuality_Medium3] liveType:LFLiveRTMP];
 
-/**    自己定制单声道  */
-/*
+    自己定制单声道
+
  LFLiveAudioConfiguration *audioConfiguration = [LFLiveAudioConfiguration new];
  audioConfiguration.numberOfChannels = 1;
  audioConfiguration.audioBitrate = LFLiveAudioBitRate_64Kbps;
  audioConfiguration.audioSampleRate = LFLiveAudioSampleRate_44100Hz;
  _session = [[LFLiveSession alloc] initWithAudioConfiguration:audioConfiguration videoConfiguration:[LFLiveVideoConfiguration defaultConfiguration]];
- */
+ 
 
-/**    自己定制高质量音频96K */
-/*
+    自己定制高质量音频96K
+
  LFLiveAudioConfiguration *audioConfiguration = [LFLiveAudioConfiguration new];
  audioConfiguration.numberOfChannels = 2;
  audioConfiguration.audioBitrate = LFLiveAudioBitRate_96Kbps;
  audioConfiguration.audioSampleRate = LFLiveAudioSampleRate_44100Hz;
  _session = [[LFLiveSession alloc] initWithAudioConfiguration:audioConfiguration videoConfiguration:[LFLiveVideoConfiguration defaultConfiguration]];
- */
+ 
 
-/**    自己定制高质量音频96K 分辨率设置为540*960 方向竖屏 */
+    自己定制高质量音频96K 分辨率设置为540*960 方向竖屏
 
-/*
+
  LFLiveAudioConfiguration *audioConfiguration = [LFLiveAudioConfiguration new];
  audioConfiguration.numberOfChannels = 2;
  audioConfiguration.audioBitrate = LFLiveAudioBitRate_96Kbps;
@@ -112,12 +112,12 @@
  videoConfiguration.sessionPreset = LFCaptureSessionPreset540x960;
  
  _session = [[LFLiveSession alloc] initWithAudioConfiguration:audioConfiguration videoConfiguration:videoConfiguration];
- */
 
 
-/**    自己定制高质量音频128K 分辨率设置为720*1280 方向竖屏 */
 
-/*
+   自己定制高质量音频128K 分辨率设置为720*1280 方向竖屏
+
+
  LFLiveAudioConfiguration *audioConfiguration = [LFLiveAudioConfiguration new];
  audioConfiguration.numberOfChannels = 2;
  audioConfiguration.audioBitrate = LFLiveAudioBitRate_128Kbps;
@@ -134,12 +134,12 @@
  videoConfiguration.sessionPreset = LFCaptureSessionPreset720x1280;
  
  _session = [[LFLiveSession alloc] initWithAudioConfiguration:audioConfiguration videoConfiguration:videoConfiguration];
- */
 
 
-/**    自己定制高质量音频128K 分辨率设置为720*1280 方向横屏  */
 
-/*
+   自己定制高质量音频128K 分辨率设置为720*1280 方向横屏
+
+
  LFLiveAudioConfiguration *audioConfiguration = [LFLiveAudioConfiguration new];
  audioConfiguration.numberOfChannels = 2;
  audioConfiguration.audioBitrate = LFLiveAudioBitRate_128Kbps;
