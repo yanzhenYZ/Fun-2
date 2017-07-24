@@ -10,7 +10,7 @@
 #import "YZContentVideoTableViewCell.h"
 #import "YZContentVideoFrame.h"
 
-@interface YZContentVideoViewController ()<VideoPlayDelegate>
+@interface YZContentVideoViewController ()
 
 @end
 

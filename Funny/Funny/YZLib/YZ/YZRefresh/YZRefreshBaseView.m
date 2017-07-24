@@ -151,7 +151,7 @@
     if (!_yzAnimationImages) {
         _yzAnimationImages = [[NSMutableArray alloc] init];
         for (NSInteger i = 0; i < 4; i++) {
-            NSString *imageName = [YZRefreshBundleImageName stringByAppendingFormat:@"%lu",i+1];
+            NSString *imageName = [YZRefreshBundleImageName stringByAppendingFormat:@"%zd",i+1];
             UIImage *image = [UIImage imageNamed:imageName];
             [_yzAnimationImages addObject:image];
         }

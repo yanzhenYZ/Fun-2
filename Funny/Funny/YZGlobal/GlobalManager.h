@@ -10,6 +10,9 @@
 
 @interface GlobalManager : NSObject
 HShareInstance(Manager)
+
+- (NSDateFormatter *)formatter;
+
 -(void)saveImage:(UIImage *)image;
 -(CGSize)labelSize:(NSString *)text font:(CGFloat)font width:(CGFloat)width;
 

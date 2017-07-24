@@ -19,6 +19,10 @@
 
 @implementation AppDelegate
 
+/*
+ Time Profiler //http://www.cocoachina.com/ios/20150225/11163.html
+ */
+
 void FunnyUncaughtExceptionHandler(NSException *exception){
     NSString *document = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).lastObject;
     NSString *path = [document stringByAppendingPathComponent:@"FunnyCrash.log"];
@@ -49,7 +53,11 @@ void FunnyUncaughtExceptionHandler(NSException *exception){
     [navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:FunnyColor}];
     [navigationBar setTintColor:FunnyColor];
     NSSetUncaughtExceptionHandler(&FunnyUncaughtExceptionHandler);
-    [WXApi registerApp:@"wx188b02f35eb50c9c"];
+    //提升打开程序速度--registerApp比较耗时
+    dispatch_queue_t queue = dispatch_queue_create("com.Funny.wx", NULL);
+    dispatch_async(queue, ^{
+        [WXApi registerApp:@"wx188b02f35eb50c9c"];
+    });
     return YES;
 }
 
@@ -68,7 +76,7 @@ void FunnyUncaughtExceptionHandler(NSException *exception){
 -(YZAVWindow *)avWindow
 {
     if (!_avWindow) {
-        _avWindow = [[YZAVWindow alloc] initWithFrame:CGRectMake(0, 0, WIDTH, 240)];
+        _avWindow = [[YZAVWindow alloc] initWithFrame:CGRectMake(0, 0, WIDTH, WIDTH * 3 / 4)];
         YZAVMark *mark = [[YZAVMark alloc] init];
         mark.mark = @"Y&Z TV";
         mark.rect = CGRectMake(5, 0, 120, 40);

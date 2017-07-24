@@ -27,9 +27,7 @@ static void * key = (void *)@"AppName";
 + (NSString *)dateWithTimeInterval:(NSTimeInterval)time
 {
     NSDate *date = [NSDate dateWithTimeIntervalSince1970:time];
-    NSDateFormatter *format = [[NSDateFormatter alloc] init];
-    [format setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-    return [format stringFromDate:date];
+    return [[GlobalManager shareManager].formatter stringFromDate:date];
 }
 + (NSString *)currentTime
 {
@@ -40,9 +38,7 @@ static void * key = (void *)@"AppName";
 }
 
 -(long long)timeStringToLongLong{
-    NSDateFormatter *format=[[NSDateFormatter alloc] init];
-    [format setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-    NSDate *date = [format dateFromString:self];
+    NSDate *date = [[GlobalManager shareManager].formatter dateFromString:self];
     return (long long)[date timeIntervalSince1970];
 }
 

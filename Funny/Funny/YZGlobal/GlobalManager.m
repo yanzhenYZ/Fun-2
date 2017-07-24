@@ -10,8 +10,25 @@
 #import "SDWebImageManager.h"
 #import "MBProgressHUD+YZZ.h"
 
+@interface GlobalManager ()
+
+@end
+
 @implementation GlobalManager
+{
+    NSDateFormatter *_formatter;
+}
 MShareInstance(Manager)
+
+-(NSDateFormatter *)formatter
+{
+    if (!_formatter) {
+        _formatter = [[NSDateFormatter alloc] init];
+        _formatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+    }
+    return _formatter;
+}
+
 -(void)saveImage:(UIImage *)image{
     if (image) {
         UIImageWriteToSavedPhotosAlbum(image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);

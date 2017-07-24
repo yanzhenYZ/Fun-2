@@ -68,6 +68,7 @@
 
 - (void)playBtnClick{
     AppDelegate *appDelegate = SharedAppDelegate;
+    //default -- avWindow.isHidden = YES,也不用调用 makeKeyAndVisible就可以显示--？？？？
     if (!appDelegate.avWindow.hidden) {
         appDelegate.avWindow.coverImage = self.mainImageView.image;
         [appDelegate.avWindow playAV:self.shareURL];
