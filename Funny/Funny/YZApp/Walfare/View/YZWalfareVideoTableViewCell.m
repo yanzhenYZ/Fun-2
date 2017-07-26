@@ -29,6 +29,8 @@
         contentLabel.numberOfLines = 0;
         [self.contentView addSubview:contentLabel];
         self.contentLabel = contentLabel;
+        
+        self.mainImageView.videoGravity = YZAVVideoGravityResize;
     }
     return self;
 }

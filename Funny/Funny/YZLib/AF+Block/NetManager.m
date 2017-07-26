@@ -15,7 +15,6 @@
 + (void)requestDataWithURLString:(NSString *)urlString finished:(GetDataFinishedBlock)finishedBlock failed:(GetDataFailedBlock)failedBlock{
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/html", @"text/json", @"text/javascript",@"text/plain",@"image/gif", nil];
-    
     //设置超时时间
     manager.requestSerializer.timeoutInterval = 12;
     //安全策略
