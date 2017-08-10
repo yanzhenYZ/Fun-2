@@ -85,6 +85,7 @@
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextDrawImage(context, frame, subImageRef);
     UIImage* newImage = [UIImage imageWithCGImage:subImageRef];
+    CGImageRelease(subImageRef);
     UIGraphicsEndImageContext(); //返回裁剪的部分图像
     [[GlobalManager shareManager] saveImage:newImage];
     

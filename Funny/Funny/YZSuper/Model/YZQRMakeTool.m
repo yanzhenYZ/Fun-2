@@ -56,7 +56,7 @@
     CGColorSpaceRef cs = CGColorSpaceCreateDeviceGray();
     
     CGContextRef bitmapRef = CGBitmapContextCreate(nil, width, height, 8, 0, cs, (CGBitmapInfo)kCGImageAlphaNone);
-    
+    CGColorSpaceRelease(cs);
     CIContext *context = [CIContext contextWithOptions:nil];
     
     CGImageRef bitmapImage = [context createCGImage:image fromRect:extent];
@@ -70,12 +70,11 @@
     // 保存bitmap到图片
     
     CGImageRef scaledImage = CGBitmapContextCreateImage(bitmapRef);
-    
+    UIImage *newImage = [UIImage imageWithCGImage:scaledImage];
     CGContextRelease(bitmapRef);
-    
     CGImageRelease(bitmapImage);
-    
-    return [UIImage imageWithCGImage:scaledImage];
+    CGImageRelease(scaledImage);
+    return newImage;
     
 }
 

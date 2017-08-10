@@ -19,7 +19,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = [UIColor clearColor];
+//        self.backgroundColor = [UIColor clearColor];
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, CONTENTSPACE, 50.0, 50.0)];
         imageView.contentMode = UIViewContentModeScaleAspectFill;
         [imageView corner];
