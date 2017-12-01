@@ -6,6 +6,9 @@
 //  Copyright © 2016年 Y&Z. All rights reserved.
 //
 
+static inline void dispatch_async_on_main_queue(void (^block)(void)) {
+    dispatch_async(dispatch_get_main_queue(), block);
+}
 
 #define DocumentsPath NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0]
 #define isIpad() (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)

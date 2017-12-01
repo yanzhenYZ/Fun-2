@@ -36,7 +36,7 @@
         [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:NSLocalizedString(@"Use Touch ID to Login.", nil) reply:^(BOOL success, NSError * _Nullable error) {
             __strong typeof(weakself) strongSelf = weakself;
             if (success) {
-                dispatch_async(dispatch_get_main_queue(), ^{
+                dispatch_async_on_main_queue(^{
                     [strongSelf intoNoteVC];
                 });
             }else{
